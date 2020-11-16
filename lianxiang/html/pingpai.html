@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>联想品牌官网_集团简介_媒体资讯_联想公益活动</title>
+		<link rel="icon" href="../img/brandIcon.jpg" />
+		<link rel="stylesheet" type="text/css" href="../css/pingpai.css"/>
+		<script src="../js/vue.js"></script>
+		<script src="../js/jquery-3.5.1.js"></script>
+		<script src="../js/pingpai.js"></script>
+	</head>
+	<body>
+		<header id="brandHeader">
+			<div id="brandHeader_top">
+				<div id="brandHeader_top_img"><img src="../img/double11_Header_left_bg.jpg"/></div>
+				<div id="brandHeader_top_middle">
+					<aside id="brandHeader_top_middle_left">
+						<ul>
+							<li><a href="../index.html">联想首页</a></li>
+							<li><a href="Mall.html">商城</a></li>
+							<li><a href="pingpai.html">品牌</a></li>
+							<li><a href="Service.html">服务</a></li>
+							<li><a href="community.html">社区</a></li>
+							<li><a href="">门店</a></li>
+							<li><span>下载app</span></li>
+						</ul>
+					</aside>
+					<aside id="brandHeader_top_middle_right">
+						<ul>
+							<li>
+								<a href="register.html" target="_blank">注册</a>
+								<div>
+									<a href="">
+										注册立即抽好礼
+										<img src="../img/double11_Header_middle_right_right_tipImg2.png"/>
+									</a>
+								</div>
+							</li>
+							<li>|</li>
+							<li><a href="">登录</a></li>
+						</ul>
+						<div>
+							<img src="../img/double11_Header_middle_right_right_phoneImg.png" alt="" />
+							<div>
+								<img src="https://p2.lefile.cn/product/adminweb/2020/04/17/5ce4890a-c091-46b4-aabb-8cf49320d08b.png" alt="" />
+								<div>
+									<span>联想智选APP</span>
+									<span style="height: 12px;color: red;">下载即享</span>
+									<span style="color: red;">688元新人礼</span>
+								</div>
+							</div>
+						</div>
+					</aside>
+				</div>
+			</div>
+			<div id="brandHeader_bottom">
+				<div id="brandHeader_bottom_middle">
+					<ul>
+						<li v-for="(v,i) in li_list" v-on:mouseover="liColorChange(i)" v-on:mouseout="liColorRemove(i)">
+							<a href=""  v-bind:class="[index==i?textColor:'']">
+								<img v-bind:src="[index==i?v.imgChange_src:v.img_src]"/>
+								{{v.atext}}
+							</a>
+							<ul v-show="index==i" v-on:mouseover="liColorChange(i)" v-on:mouseout="liColorRemove(i)">
+								<a href=""></a>
+								<li v-for="(v,i) in liSon_list[index2]" v-on:mouseover="liSonColorChange(i)" v-on:mouseout="liSonColorRemove(i)">
+									<a href=""  v-bind:class="[sonIndex==i?textColor:'']">{{v.atext}}</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div id="brandBody">
+			<div id="brandVideo">
+				<div>
+					<a href="javascript:void(0)"></a>
+					<video src="" controls="" muted=""></video>
+				</div>
+			</div>
+			<div id="brandBody_head">
+				<span><a href="javascript:void(0)"></a></span>
+				<span><a href="javascript:void(0)"></a></span>
+				<div id="video_shufflingFigure">
+					<div>
+						<video src="https://lenovo-1257188835.file.myqcloud.com/bg.mp4" muted="" autoplay="" loop=""></video>
+						<div id="brandBody_head_text">
+							<div>
+								<p>联想 智慧中国</p>
+								<p>智慧是一种力量，联想的力量，是要让每个人都享有智慧，都感受到梦想实现的可能。</p>
+							</div>
+							<div>
+								<a href="javascript:void(0)"></a>
+								<img src="https://p3.lefile.cn/fes/cms/2019/09/10/vrxrpsqpl7f9cdac5w6h0jholb0mp8100901.png" alt="" />
+							</div>
+						</div>
+					</div>
+					<div>
+						<video src="https://lenovo-1257188835.file.myqcloud.com/brand2lite.mp4" muted="" autoplay="" loop=""></video>
+						<div id="brandBody_head_text">
+							<div>
+								<p>联想 智慧中国</p>
+								<p>智慧是一种力量，联想的力量，是要让每个人都享有智慧，都感受到梦想实现的可能。</p>
+							</div>
+							<div>
+								<a href="javascript:void(0)"></a>
+								<img src="https://p3.lefile.cn/fes/cms/2019/09/10/vrxrpsqpl7f9cdac5w6h0jholb0mp8100901.png" alt="" />
+							</div>
+						</div>
+					</div>
+					<div>
+						<video src="https://lenovo-1257188835.file.myqcloud.com/hero-helloworld.mp4.mp4" muted="" autoplay="" loop=""></video>
+						<div id="brandBody_head_text">
+							<div>
+								<p>联想 智慧中国</p>
+								<p>智慧是一种力量，联想的力量，是要让每个人都享有智慧，都感受到梦想实现的可能。</p>
+							</div>
+							<div>
+								<a href="javascript:void(0)"></a>
+								<img src="https://p3.lefile.cn/fes/cms/2019/09/10/vrxrpsqpl7f9cdac5w6h0jholb0mp8100901.png" alt="" />
+							</div>
+						</div>
+					</div>
+					<div>
+						<video src="https://lenovo-1257188835.file.myqcloud.com/bg.mp4" muted="" autoplay="" loop=""></video>
+						<div id="brandBody_head_text">
+							<div>
+								<p>联想 智慧中国</p>
+								<p>智慧是一种力量，联想的力量，是要让每个人都享有智慧，都感受到梦想实现的可能。</p>
+							</div>
+							<div>
+								<a href="javascript:void(0)"></a>
+								<img src="https://p3.lefile.cn/fes/cms/2019/09/10/vrxrpsqpl7f9cdac5w6h0jholb0mp8100901.png" alt="" />
+							</div>
+						</div>
+					</div>
+					<div>
+						<video src="https://lenovo-1257188835.file.myqcloud.com/brand2lite.mp4" muted="" autoplay="" loop=""></video>
+						<div id="brandBody_head_text">
+							<div>
+								<p>联想 智慧中国</p>
+								<p>智慧是一种力量，联想的力量，是要让每个人都享有智慧，都感受到梦想实现的可能。</p>
+							</div>
+							<div>
+								<a href="javascript:void(0)"></a>
+								<img src="https://p3.lefile.cn/fes/cms/2019/09/10/vrxrpsqpl7f9cdac5w6h0jholb0mp8100901.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul>
+					<li><a href="javascript:void(0)" style="background-color: white;"></a></li>
+					<li style="margin: 0px 10px;"><a href="javascript:void(0)"></a></li>
+					<li><a href="javascript:void(0)"></a></li>
+				</ul>
+			</div>
+			<div id="brandBody_body">
+				<div id="brandBody_body_middle">
+					<header id="brandBody_body_middle_header">
+						<header><a href="">品牌故事</a></header>
+						<div v-for="(v,i) in list" v-show="index==i">
+							<span><img src="https://p2.lefile.cn/fes/cms/2019/09/10/sqr02c2spsmp5qba9jzqhwhw7wtcnj453014.png"/>{{v.span}}</span>
+							<span></span>
+							<p>{{v.p}}</p>
+						</div>
+					</header>
+					<footer id="brandBody_body_middle_footer">
+						<ul>
+							<li v-for="(v,i) in list" v-on:mouseover="liChange(i)" v-on:mouseout="liRemove(i)" v-bind:class="[index==i?liBorderBottom:'']">
+								<a href="" v-bind:style='{"background-image":"url("+v.img_src+")","background-size":"100% 100%"}'>
+									<span v-show="spanIndex==i">—— {{v.span}} ——</span>
+								</a>
+							</li>
+						</ul>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</footer>
+				</div>
+				<div id="brandBody_body_middle2">
+					<div>
+						<section>
+							<div id="brandBody_body_middle2_chanPinAnLiTop">
+								<header><p>产品&案例</p></header>
+								<div>
+									<img src="https://p3.lefile.cn/fes/cms/2019/09/10/at8di8ibie0jh9abeomjad4hh7sir8826074.png"/>
+									<p>成功案例</p>
+									<span></span>
+								</div>
+								<footer>
+									<img src="https://p3.lefile.cn/fes/cms/2019/09/10/k92zki05vdvoy1w7up6s6apbra5wb3596042.png" alt="" />
+									<p>帮助企业构建承载数字化转型的IT基础架构，实现IT角色转变的立足、立稳，是联想目前正在努力践行的历程。</p>
+								</footer>
+							</div>
+							<div id="brandBody_body_middle2_imgRight"><img src="https://p4.lefile.cn/fes/cms/2019/09/19/yiw3lviq3lnbhwsf52rlsrzmf2hsuo597400.jpg" alt="" /></div>
+							<div id="brandBody_body_middle2_imgMiddle"><img src="https://p4.lefile.cn/fes/cms/2019/10/10/dpvpla9ai945guaqnfhg8m65fmsorj960316.png" alt="" /></div>
+							<div id="brandBody_body_middle2_chanPinAnLiBottom">
+								<div>
+									<p>
+										<img src="https://p1.lefile.cn/fes/cms/2019/09/10/rsfg7gy7lrnmes93yumu3db5k9qzhu858781.png" alt="" />
+										<span></span>
+									</p>
+									<a href="">成功案例</a>
+								</div>
+								<div>
+									<p>
+										<img src="https://p1.lefile.cn/fes/cms/2019/09/10/rsfg7gy7lrnmes93yumu3db5k9qzhu858781.png" alt="" />
+										<span></span>
+									</p>
+									<a href="">产品发布</a>
+								</div>
+							</div>
+							<div id="brandBody_body_middle2_textRight">
+								<img src="https://p3.lefile.cn/fes/cms/2019/09/10/k92zki05vdvoy1w7up6s6apbra5wb3596042.png" alt="" />
+								<p>凭借ThinkSystem服务器的高可靠性和联想经年累月建立起来的HPC深厚积淀，联想携手国家卫星海洋应用中心打造新的HPC集群，为我国海洋预报和海事监测提供强大的计算保障，进一步满足“海上丝绸之路”对高性能计算能力的要求。</p>
+							</div>
+						</section>
+					</div>
+				</div>
+				<div id="brandBody_body_middle3">
+					<div>
+						<section>
+							<div class="brandBody_body_middle3_img"><img src="https://p4.lefile.cn/fes/cms/2019/11/14/zxsma606o2nr9akl9iinv03kdv1irt663708.jpg" alt="" /></div>
+							<div class="brandBody_body_middle3_text">
+								<header><p>新闻&会展</p></header>
+								<div>
+									<img src="https://p2.lefile.cn/fes/cms/2019/09/10/3ofnud07jq6152xh3wsv2mxmxq07md672027.png"/>
+									<p>新闻</p>
+									<span></span>
+								</div>
+								<footer>
+									<img src="https://p3.lefile.cn/fes/cms/2019/09/10/k92zki05vdvoy1w7up6s6apbra5wb3596042.png" alt="" />
+									<p>11月14日，第五届联想创新科技大会在北京开幕，吸引了业内两千余名企业代表、专家学者及媒体参会，共同探讨智能化浪潮下各行业的转型与变革。</p>
+								</footer>
+								<footer>
+									<img src="https://p3.lefile.cn/fes/cms/2019/09/10/k92zki05vdvoy1w7up6s6apbra5wb3596042.png" alt="" />
+									<p>联想3S战略从智能物联网、智能基础设施和行业智能三个维度入手, 已建立“端—边—云—网—智”的架构体系，推动各行各业智能化转型。</p>
+								</footer>
+							</div>
+							<div class="brandBody_body_middle3_bg1">
+								<img src="https://p1.lefile.cn/fes/cms/2019/09/10/fxqma4e5ldkjcm8qboo3hjbc5dqye9865853.png" alt="" />
+							</div>
+							<div class="brandBody_body_middle3_bg2"></div>
+							<div class="brandBody_body_middle3_a">
+								<div>
+									<p>
+										<img src="https://p1.lefile.cn/fes/cms/2019/09/10/rsfg7gy7lrnmes93yumu3db5k9qzhu858781.png" alt="" />
+										<span></span>
+									</p>
+									<a href="">成功案例</a>
+								</div>
+								<div>
+									<p>
+										<img src="https://p1.lefile.cn/fes/cms/2019/09/10/rsfg7gy7lrnmes93yumu3db5k9qzhu858781.png" alt="" />
+										<span></span>
+									</p>
+									<a href="">产品发布</a>
+								</div>
+								<div>
+									<p>
+										<img src="https://p1.lefile.cn/fes/cms/2019/09/10/rsfg7gy7lrnmes93yumu3db5k9qzhu858781.png" alt="" />
+										<span></span>
+									</p>
+									<a href="">媒体图像</a>
+								</div>
+							</div>
+						</section>
+						<footer>
+							<div class="brandBody_body_middle3_img" style="width: 460px;height: 640px;left: 820px;"><img src="https://p2.lefile.cn/fes/cms/2019/10/09/qf92ugtvhjqx2ynrurvxx6xbyvc55q284438.png" alt="" /></div>
+							<div class="brandBody_body_middle3_text" style="width: 600px;left: 170px;">
+								<header><p>关于联想</p></header>
+								<div>
+									<img src="https://p1.lefile.cn/fes/cms/2019/09/10/h3d06k26xiq89c7bzeesis3ypt4f25051868.png"/>
+									<p>公司简介</p>
+									<span></span>
+								</div>
+								<footer>
+									<img src="https://p3.lefile.cn/fes/cms/2019/09/10/k92zki05vdvoy1w7up6s6apbra5wb3596042.png" alt="" />
+									<p style="width: 560px;">联想是一家成立于中国、业务遍及180个市场的全球化科技公司。全球约有5.7万名员工，年营业额超过3400亿人民币。联想聚焦全球化发展，树立了行业领先的多元企业文化和运营模式典范，服务全球超过10亿用户。作为值得信赖的全球科技企业领导者，联想助力客户，把握明日科技，变革今日世界。</p>
+								</footer>
+							</div>
+							<div class="brandBody_body_middle3_bg1" style="width: 162px; height: 184px;left: 760px;top: 550px;">
+								<img src="https://p2.lefile.cn/fes/cms/2019/09/10/e6zgp3qohnnbyhf2sehxr67hgmk58r045221.png" alt="" />
+							</div>
+							<div class="brandBody_body_middle3_bg2" style="width: 83px; height: 52px;left: 400px;top: 550px;"></div>
+							<div class="brandBody_body_middle3_a" style="width: 223px; height: 206px;left: 210px;top: 400px;">
+								<div>
+									<p>
+										<img src="https://p1.lefile.cn/fes/cms/2019/09/10/rsfg7gy7lrnmes93yumu3db5k9qzhu858781.png" alt="" />
+										<span></span>
+									</p>
+									<a href="">公司简介</a>
+								</div>
+								<div>
+									<p>
+										<img src="https://p1.lefile.cn/fes/cms/2019/09/10/rsfg7gy7lrnmes93yumu3db5k9qzhu858781.png" alt="" />
+										<span></span>
+									</p>
+									<a href="">投资者关系</a>
+								</div>
+								<div>
+									<p>
+										<img src="https://p1.lefile.cn/fes/cms/2019/09/10/rsfg7gy7lrnmes93yumu3db5k9qzhu858781.png" alt="" />
+										<span></span>
+									</p>
+									<a href="">联系我们</a>
+								</div>
+								<div>
+									<p>
+										<img src="https://p1.lefile.cn/fes/cms/2019/09/10/rsfg7gy7lrnmes93yumu3db5k9qzhu858781.png" alt="" />
+										<span></span>
+									</p>
+									<a href="">参观联想</a>
+								</div>
+							</div>
+						</footer>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer id="brandFooter">
+			<div>
+				<ul>
+					<li v-for="(v,i) in li_list">
+						<a href="" v-for="(v1,i1) in v">{{v1}}</a>
+					</li>
+					<li style="padding: 10px 0px;">
+						<p>联想官方社交平台</p>
+						<div>
+							<a href="" style="background-position: -63px -190px;"></a>
+							<a href="" style="background-position: -119px -190px;"></a>
+							<a href="" style="background-position: -175px -190px;"></a>
+							<a href="" style="background-position: -8px -190px;"></a>
+						</div>
+						<div>
+							<a href="" style="background-position: -8px -126px;"></a>
+							<a href="" style="background-position: -119px -126px;"></a>
+						</div>
+						<p>400-990-8888转4</p>
+						<p>周一到周日 9:00-21:00</p>
+						<div><a href=""></a></div>
+					</li>
+				</ul>
+				<div>
+					<p>选择国家或地区</p>
+				</div>
+				<div>
+					<ul>
+						<li v-for="(v,i) in countries">
+							<a href="" v-bind:class="SelectedIndex==i?countryNameColor:''" v-on:mouseover="countryNameColorChange(i)" v-on:mouseout="countryNameColorRemove(i)">
+								{{v}}
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<footer>
+				<section>
+					<ul id="footer_bottom_left">
+						<li style="padding-right:0px;">版权所有:</li>
+						<li style="padding-left:0px;">1998-2020 联想集团</li>
+						<li>|</li>
+						<li><a href="">法律公告</a></li>
+						<li>|</li>
+						<li><a href="">隐私权政策</a></li>
+						<li>|</li>
+						<li><a href="">产品安全</a></li>
+					</ul>
+					<ul id="footer_bottom_right">
+						<li><a href="">京ICP备11035381</a></li>
+						<li>|</li>
+						<li><a href="">京公网安备110108007970号</a></li>
+						<li>|</li>
+						<li><a href="">营业执照:91110108700000458B</a></li>
+					</ul>
+				</section>
+			</footer>
+		</footer>
+	</body>
+</html>

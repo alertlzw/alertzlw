@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>0元试用</title>
+		<script src="../js/jquery-3.5.1.js"></script>
+		<script src="../js/vue.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/head3.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/cbl.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/botto.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/daojishi.css"/>
+		<style type="text/css">
+			#shangpin{
+				width: 100%;
+				margin-top: 47px;
+				background: #e6e7ec;
+				z-index: -3;
+			}
+			#diannao{
+				width: 1200px;
+				margin: 0px auto 10px auto;
+				height: 465px;
+				position: relative;
+				z-index: 1;
+			}
+			#diannao>a>img{
+				position: absolute;
+				top: 0;
+				left: 0px;
+			}
+			#diannao>#white_right{
+				width: 405px;
+				height: 100%;
+				padding: 0px 30px;
+				background: white;
+				opacity: 0.9;
+				position: absolute;
+				right: 0px;
+			}
+			#diannao>#white_right>#wenzi{
+				width: 405px;
+				height: 51px;
+				margin-top: 20px;
+			}
+			#diannao>#white_right>#wenzi>#huo{
+				background: black;
+				color: white;
+				width: 110px;
+				height: 20px;
+				line-height: 20px;
+				letter-spacing: 6px;
+				padding-left: 7px;
+			}
+			#diannao>#white_right>#wenzi>h3{
+				padding-top: 30px;
+				font-size: 35px;
+				font-weight: normal;
+				height: 48px;
+				line-height: 48px;
+				overflow: hidden;
+				margin: 0;
+			}
+			#diannao>#white_right>#wenzi>#jieshao{
+				padding-top: 5px;
+				min-height: 54px;
+				overflow: hidden;
+				line-height: 24px;
+				font-size: 12px;
+			}
+			#diannao>#white_right>#wenzi>#shengqing{
+				display: block;
+				width: 200px;
+				height: 40px;
+				background: gold;
+				color: white;
+				background:rgb(226,35,27);
+				text-align: center;
+				border-radius: 2px;
+				line-height: 40px;
+				font-size: 18px;
+				text-decoration: none;
+				margin-top: 15px;
+				margin-bottom: 30px;
+			}
+			#diannao>#white_right>#wenzi>#fenxiang{
+				position: absolute;
+				top: 282px;
+				right: 175px;
+				display: block;
+				width: 30px;
+				height: 30px;
+				background: white;
+				background-image: url(../img/dd/w-fx.png);
+				background-position: -9px -36px;
+			}
+			#diannao>#white_right>#wenzi>#djs_sj{
+				width: 420px;
+				height: 35px;
+				margin-top: 20px;
+				margin-bottom: 25px;
+			}
+			#diannao>#white_right>#wenzi>#djs_sj>.sysj{
+				float: left;
+				width: 70px;
+				height: 35px;
+				line-height: 35px;
+			}
+			#diannao>#white_right>#wenzi>#djs_sj>.sysj_djs>.tian{
+				width: 25px;
+				height: 35px;
+				background: rgb(63,63,63);
+				float: left;
+				margin-left: 5px;
+				border-radius: 5px;
+				color: white;
+			}
+			#diannao>#white_right>#wenzi>#djs_sj>.sysj_djs>span{
+				height: 35px;
+				line-height: 35px;
+				padding: 0px 0px 0px 5px;
+				float: left;
+			}
+			
+			
+			
+			
+			#diannao>#white_right>#wenzi>.number{
+				margin-right: 20px;
+				font-size: 14px;
+			}
+			#diannao>#white_right>#wenzi>.number>b{
+				font-size: 18px;
+				color: #000;
+			}
+			#splb{
+				width: 1210px;
+				margin: 70px auto 0px auto;
+				overflow: hidden;
+			}
+			#splb>ul{
+				
+			}
+			#splb>ul>li{
+				width: 380px;
+				height: 457px;
+				float: left;
+				list-style: none;
+				margin-bottom: 30px;
+				margin-right: 30px;
+				border: 1px solid rgba(0,0,0,0.3);
+				position: relative;
+			}
+			#splb>ul>li:nth-of-type(3n){
+				margin-right: 0px;
+			}
+			#splb>ul>li>.tp{
+				height: 280px;
+				margin: 5px 0px 0px 43px;
+				padding: 0px 0px 20px 0px;
+				position: relative;
+			}
+			#splb>ul>li>b{
+				display: block;
+				margin: 8px 0px 0px 8px;
+			}
+			#splb>ul>li>b>span{
+				margin: 0px 9px;
+				color: red;
+			}
+			#splb>ul>li>.p_top{
+				display: inline-block;
+				width: 69.6px;
+				font-size: 10px;
+				text-align: center;
+				margin-left: 8px;
+				border: 0.5px solid #000;
+			}
+			#splb>ul>li>.p_middle{
+				text-align: center;
+				font-size: 13px;
+				background: rgba(0,0,0,0.7);
+				display: block;
+				color: white;
+				padding: 3px;
+			}
+			#splb>ul>li>.bottom{
+				position: relative;
+				/*top: 19px;*/
+				text-align: center;
+				height: 39px;
+				line-height: 39px;
+			}
+			.sp_bt{
+				text-align: center;
+				font-size: 13px;
+				color: rgba(0,0,0,0.5);
+			}
+			#splb>ul>li>.xsq{
+				width: 100%;
+				height: 79xp;
+				position: absolute;
+				bottom: 0px;
+				text-align: center;
+				line-height: 79px;
+				background: white;
+				display: none;
+				z-index: 2;
+			}
+			#splb>ul>li>.xsq>a{
+				text-decoration: none;
+				color: #000000;
+			}
+			#splb>ul>li>.bottom:hover+.xsq{
+				position: absolute;
+				display: block;
+			}
+			.baozhang{
+				width: 100%;
+				height: 199px;
+			}
+			.baozhang>div{
+				width: 1200px;
+				height: 199px;
+				margin: 0px auto;
+			}
+			.baozhang>div>img{
+				width: 100%;
+				height: 199px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+        <div class="logo"><a href=""><img src="../img/dd/4879b596-0b39-4534-bcc8-a50693fe825e.jpg" alt="" class="logo0"></a></div>
+        <div class="header_top">
+            
+            <div class="header_top_mid">
+            <ul>
+                <li><a href="">联想首页</a></li>
+                <li><a href="">商城</a></li>
+                <li><a href="">品牌</a></li>
+                <li><a href="">服务</a></li>
+                <li><a href="">社区</a></li>
+                <li><a href="">门店</a></li>
+                <li><a href=""><span>下载app</span></a></li>
+            </ul>
+            <div class="header_top_right">
+                <div class="heade_land">
+                    <a href="">注册</a>
+                    <i>|</i>
+                    <a href="">登陆</a>
+                    <i class="qipao"><a href="">注册送688元大礼包<img src="../img/dd/gifts.png" alt=""></a></i>
+                </div>
+                <div class="heade_phone">
+                    <img src="../img/dd/c8f87ce8-1e14-4bb3-854e-f86af0f07072.png" alt="" class="phone1">
+                    <div class="phone22">
+                        <img src="../img/dd/5ce4890a-c091-46b4-aabb-8cf49320d08b.png" alt="">
+                        <span>联想智选APP </span>
+                        <p>下载即享 <br>688元新人礼</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="header_bottom_mid">
+                <ul>
+                    <li><a href="">11.11</a></li>
+                    <li><a href="">新品</a></li>
+                    <li><a href="">定制</a></li>
+                    <li><a href="">以旧换新</a></li>
+                    <li><a href="">新品试用</a></li>
+                    <li><a href="">积分购</a></li>
+                    <li><a href="">学生</a></li>
+                    <li><a href="">直播</a></li>
+                    <li><a href="">企业购</a></li>
+                    <li><a href="">9.9元</a></li>
+                </ul>
+
+                <div class="sea" >
+                    <input type="text" name="" id=""  value="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp">
+                    <a href=""><span style="background-image: url(../img/dd/f26ff743-3f82-4072-b27a-193f0e9ad675.png);"></span></a>
+                </div>
+                <div class="header_top_right" id="a11" style="display: none;">
+                    <div class="heade_land">
+                        <a href="" class="sea_fangdajing"><span style="background-image: url(../img/dd/f26ff743-3f82-4072-b27a-193f0e9ad675.png);"></span></a>
+                        <a href="">注册</a>
+                        <i>|</i>
+                        <a href="">登陆</a>
+                        <i class="qipao"><a href="">注册送688元大礼包<img src="../img/dd/gifts.png" alt=""></a></i>
+                    </div>
+                    <div class="heade_phone">
+                        <img src="../img/dd/c8f87ce8-1e14-4bb3-854e-f86af0f07072.png" alt="" class="phone1">
+                        <div class="phone22">
+                            <img src="../img/dd/5ce4890a-c091-46b4-aabb-8cf49320d08b.png" alt="">
+                            <span>联想智选APP </span>
+                            <p>下载即享 <br>688元新人礼</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+		<!--大介绍-->
+		<div id="djs">
+			<div id="diannao">
+				<a href="">
+					<img src="../img/dd/diannao.jpg"/>
+				</a>
+				<div id="white_right">
+					<div id="wenzi">
+						<p style="color: #000;font-size: 14px;">
+						0元试用第
+							<b style="color: red">88</b>
+						期
+						</p>
+						<div id="huo">
+							火热进行中
+						</div>
+						<h3>
+							ThinkBook 14 锐智系创
+						</h3>
+						<p id="jieshao">
+							【王源同款】全新ThinkBook 14 酷睿版英特尔酷睿i5 锐智系创造本来了！硬核实力，锐意有型#全新CPU+GPU架构，深度学习AI加持，双通道内存最高支持40GB，搭载MX450独立显卡，相较上一代性能提升高达50%，相较集成显卡性能提升2.5X。机身纤薄，高效办公说走就走！更多科技惊喜，速来0元申请试用啦！免费试用，无须归还！
+						</p>
+						<a href="" id="shengqing">
+							免费申请
+						</a>
+						<a href=""id="fenxiang"></a>
+						<div id="djs_sj">
+							<div class="sysj">剩余时间:</div>
+							<div id="t">天</div>
+							<div id="shi">时</div>
+							<div id="fen">分</div>
+							<div id="miao">秒</div>
+							<div id="box">
+								<ul v-for="(v,i) in numbers">
+									<li v-for="(v1,i1) in numbers[i]">{{v1}}</li>
+								</ul>
+							</div>
+						</div>
+						
+						<span class="number">产品数量:<b>1</b></span>
+						<span class="number">申请人数:<b>11538</b></span>
+					</div>
+						
+				</div>
+			</div>
+		</div>
+		<!--商品列表渲染-->
+		<div id="splb">
+			<ul>
+				<li v-for="(v,i) in list">
+					<b>第<span>{{v.sz}}</span>期</b>
+					<p class="p_top">{{v.p_top}}</p>
+					<div class="tp">
+						<a href=""><img :src=v.img_src height="100%"/></a>
+					</div>
+					<p class="p_middle">{{v.p_middle}}</p>
+					<div class="bottom">
+						{{v.bt}}
+						<p class="p_bt">
+							<pre class="sp_bt">{{v.sp_bt}}</pre>
+						</p>
+					</div>
+					<!--移入显示区-->
+					<div class="xsq">
+						<a href="">{{v.yc}}</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="baozhang">
+			<div>
+				<img src="../img/baozhang.png" alt="">
+			</div>
+		</div>
+		<!--固定侧边栏-->
+    	<div class="sort" >
+            <ul>
+	            <li>
+	                <a href="">
+	                    <img src="../img/dd/b-rx.png" alt="" class="baiimg">
+	                    <img src="../img/dd/r-rx.png" alt="" class="hongimg">
+	                </a>
+	                <ul>
+	                    <li ><a href=""><img src="../img/dd/b-scrx.png" alt=""class="li_bai"></a></li>
+	                    <li ><a href=""><img src="../img/dd/r-scrx.png" alt=""class="li_hong"></a></li>
+	                </ul>
+	            </li>
+	            <li>
+	                <a href="">
+	                    <img src="../img/dd/b-zx.png" alt="" class="baiimg">
+	                    <img src="../img/dd/r-zx.png" alt="" class="hongimg">
+	                </a>
+	                <ul>
+	                    <li ><a href=""><img src="../img/dd/b-sqzx.png" alt=""class="li_bai"></a></li>
+	                    <li ><a href=""><img src="../img/dd/r-sqzx.png" alt=""class="li_hong"></a></li>
+	                </ul>
+	            </li>
+	            <li>
+	                <a href="">
+	                    <img src="../img/dd/b-md.png" alt="" class="baiimg">
+	                    <img src="../img/dd/r-md.png" alt="" class="hongimg">
+	                </a>
+	            </li>
+	            <li>
+	                <a href="">
+	                    <img src="../img/dd/b-tc.png" alt="" class="baiimg">
+	                    <img src="../img/dd/r-tc.png" alt="" class="hongimg">
+	                </a>
+	            </li>
+	            <li>
+	                <a href="">
+	                    <img src="../img/dd/b-app.png" alt="" class="baiimg">
+	                    <img src="../img/dd/r-app.png" alt="" class="hongimg">
+	                </a>
+	                <ul style="position: absolute;top: 0px;left: -101px;">
+	                    <li ><a href=""><img src="../img/dd/eewwmm.png" alt="" class="li_bai"></a></li>
+	                    <li ><a href=""><img src="../img/dd/eewwmm.png" alt="" class="li_hong"></a></li>
+	                </ul>
+	            </li>
+	            <li>
+	                <a href="">
+	                    <img src="../img/dd/b-zc.png" alt="" class="baiimg">
+	                   <img src="../img/dd/r-zc.png" alt="" class="hongimg">
+	                </a>
+	                <ul style="position: absolute;top: 0px;left: -101px;">
+	                    <li ><a href=""><img src="../img/dd/zcydn.png" alt=""class="li_bai"></a></li>
+	                    <li ><a href=""><img src="../img/dd/zcydn.png" alt=""class="li_hong"></a></li>
+	                </ul>
+	            </li>
+	            <li class="firstlevel">
+	                <a href="">
+	                    <img src="../img/dd/b-fh.png" alt="" class="baiimg">
+	                    <img src="../img/dd/r-fh.png" alt="" class="hongimg">
+	                </a>
+	            </li>
+       		</ul>
+        </div>
+		<!--底部-->
+		<div class="foot">
+        <div class="foot_top">
+
+            <ul>
+                <li>
+                    <a href="" class="foot_top_title">购物指南</a>
+                    <a href="">服务商信息</a>
+                    <a href="">购买流程</a>
+                    <a href="">注册登陆</a>
+                </li>
+                <li>
+                    <a href="" class="foot_top_title">配送方式</a>
+                    <a href="">配送方式</a>
+                    <a href="">配送方式信息</a>
+                    <a href="">签收原则</a>
+                    <a href="">物流查询</a>
+                </li>
+                <li>
+                    <a href="" class="foot_top_title">支付方式</a>
+                    <a href="">分期支付</a>
+                    <a href="">支付方式</a>
+                    <a href="">支付问题</a>
+                </li>
+                <li>
+                    <a href="" class="foot_top_title">订单信息</a>
+                    <a href="">订单信息</a>
+                    <a href="">发票信息</a>
+                    <a href="">手机激活查询</a>
+                </li>
+                <li>
+                    <a href="" class="foot_top_title">售后服务</a>
+                    <a href="">
+
+                       	 售后服务总则
+        
+                    </a>
+                    <a href="">
+
+                        24小时在线客服
+        
+                    </a>
+                    <a href="">
+
+					联想服务入口
+        
+                     </a>
+                     <a href="">
+
+                      	  热门解决方案
+        
+                     </a>
+                    <a href="">
+
+                        Lenovo Quick Fix工具
+        
+                     </a>
+                </li>
+                
+                <li>
+                    <a href="" class="foot_top_title">其他说明</a>
+                    <a href="">服务承诺</a>
+                    <a href="">账户安全</a>
+                    <a href="">手机产品购买须知</a>
+                    <a href="">环境信息</a>
+                </li>
+                <li class="kef">
+                    <div class="kef_phone">
+                        <h3>400-990-8888转4</h3>
+                        <span>周一到周日 9:00-21:00</span>
+                        <a href=""></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="foot_bot">
+            <div class="foot_bot_con">
+                <div class="foot_bot_con_left">
+                    
+
+              	  版权所有：1998-2020 联想集团
+
+                
+                <span>|</span>
+                &nbsp;
+                <a href="" >法律公告</a>
+                &nbsp;
+                <span>|</span>
+                &nbsp;
+                <a href="">隐私权政策</a>
+                &nbsp;
+                <span>|</span>
+                &nbsp;
+                <a href="">产品安全</a>
+                &nbsp;
+                </div>
+                <div class="foot_bot_con_right">
+                   <a href="">京ICP备11035381</a>
+                   &nbsp;
+                   <span>|</span>
+                   &nbsp;
+                   <i>京公网安备110108007970号</i>
+                   &nbsp;
+                   <span>|</span>
+                   &nbsp;
+                   <a href="">营业执照:91110108700000458B</a> 
+                   &nbsp;
+                </div>
+            </div>
+        </div>
+  </div>
+		<!-- <script src="../js/swiper-bundle.min.js"></script> -->
+		<script type="text/javascript">
+//  	头部事件
+    	 $(window).scroll(function(){
+			if($(window).scrollTop()>70){
+				$(".header_top").hide();
+	            $(".header_bottom").css({"position":"fixed","z-index":"20","height":"50px","line-height":"50px"});
+	            $(".header_bottom>.header_bottom_mid>ul>li").css({"line-height":"50px"});
+	            $(".logo").css({"position":"fixed","z-index":"21"});
+	            $(".header_bottom_mid>.header_top_right").show();
+	            $(".sea").hide();
+	            
+	        }if($(window).scrollTop()<69){
+	            $(".header_top").show();
+	            $(".header_bottom").css({"position":"static","z-index":"20","height":"70px","line-height":"70px"});
+	            $(".header_bottom>.header_bottom_mid>ul>li").css({"line-height":"70px"});
+	            $(".logo").css("position","static");
+	            $(".header_bottom_mid>.header_top_right").hide()
+	            $(".sea").show();
+	        }
+        })
+//		列表渲染
+		new Vue({
+			el:"#splb",
+			data:{
+				src:"",
+				
+				list:[
+				{
+					img_src:"../img/dd/pbxx.jpg",
+					sz:"87",
+					p_top:"名单审核中",
+					p_middle:"审核结束时间：2020-11-13 18:00:00",
+					bt:"联想平板小新Pad Pro 11.5英寸",
+					sp_bt:"产品数量：1",
+					yc:"名单审核中"
+				},
+				{
+					img_src:"../img/dd/lxlk.jpg",
+					sz:"86",
+					p_top:"报告回收中",
+					p_middle:"报告回收结束时间：2020-11-12 10:00:00",
+					bt:"Lecoo 学生家教机RJ-812",
+					sp_bt:"产品数量:1    申请人数：8948",
+					yc:"查看名单"
+				},
+				{
+					img_src:"../img/dd/8dkr.jpg",
+					sz:"85",
+					p_top:"活动结束",
+					p_middle:"活动结束时间：2020-11-09 14:10:00",
+					bt:"小新14女排签名款笔记本",
+					sp_bt:"产品数量：1",
+					yc:"查看报告"
+				},
+				{
+					img_src:"../img/dd/mjs.jpg",
+					sz:"84",
+					p_top:"报告回收中",
+					p_middle:"报告结束时间：2020-12-01 23:00:00",
+					bt:"motorola razr 5G 8GB+256GB",
+					sp_bt:"产品数量：1      申请人数:26410",
+					yc:"查看名单"
+				},
+				{
+					img_src:"../img/dd/psh.jpg",
+					sz:"83",
+					p_top:"活动结束",
+					p_middle:"活动结束时间：2020-10-30 12:00:00",
+					bt:"Lecoo消毒液制造仪 X1",
+					sp_bt:"产品数量：5",
+					yc:"显示报告"
+				},
+				{
+					img_src:"../img/dd/hbsj.jpg",
+					sz:"82",
+					p_top:"活动结束",
+					p_middle:"活动结束时间：2020-10-14 10:00:00",
+					bt:"联想YOGA电子书故宫文创版",
+					sp_bt:"产品数量：1",
+					yc:"显示报告"
+				},
+				{
+					img_src:"../img/dd/cysj.jpg",
+					sz:"81",
+					p_top:"活动结束",
+					p_middle:"活动结束时间：2020-09-11 12:05:00",
+					bt:"Lecoo机器人大师编程套装",
+					sp_bt:"产品数量：10",
+					yc:"显示报告"
+				},
+				{
+					img_src:"../img/dd/zjzsj.jpg",
+					sz:"80",
+					p_top:"活动结束",
+					p_middle:"活动结束时间：2020-09-04 17:00:00",
+					bt:"拯救者电竞手机Pro",
+					sp_bt:"产品数量：1",
+					yc:"显示报告"
+				},
+				{
+					img_src:"../img/dd/dnxsq.jpg",
+					sz:"879",
+					p_top:"活动结束",
+					p_middle:"活动结束时间：2020-08-31 14:00:00",
+					bt:"联想Q27q故宫文创联名款显示器",
+					sp_bt:"产品数量：2",
+					yc:"显示报告"
+				},
+				]
+			},
+		})
+		
+//			出现固定栏
+			$(window).scroll(function(){
+		        if($(window).scrollTop()>400){
+					$(".sort").show();
+				}else{
+					$(".sort").hide();
+				}
+   			})
+
+//			回到顶部
+			$(".sort>ul>li>.firstlevel").click(function(){
+				if($(this).parent().index()==16){
+					$("html,body").animate({"scrollTop":"0px"},500);
+		            return;
+		        }
+       		 })
+			
+			
+			
+			
+			new Vue({
+				el:"#box",
+				data:{
+					numbers:[
+						[0,1,2,3,4,5,6,7,8,9],
+						[0,1,2,3,4,5,6,7,8,9],
+						[0,1,2,3,4,5,6,7,8,9],
+						[0,1,2,3,4,5,6,7,8,9],
+						[0,1,2,3,4,5,6,7,8,9],
+						[0,1,2,3,4,5,6,7,8,9],
+						[0,1,2,3,4,5,6,7,8,9],
+						[0,1,2,3,4,5,6,7,8,9]
+					]
+				}
+			})
+			
+			/*
+			 * 函数名:setDeadLineTime
+			 * 作用:倒计时轮播
+			 * 参数:ul,deadlineDates
+			 * 参数说明:
+			 * ul:每个轮播时间为一个ul,如天数的十位,天数的个位,共八个ul,传进去的参数是标签选择器
+			 * deadlineDates:截止日期
+			 */
+			function setDeadLineTime(ul,deadlineDates){
+				//把时间转成Date对象
+				var deadlineDate = new Date(deadlineDates);
+				//拿到截止时间的毫秒数
+				var milliseconds = deadlineDate.getTime();
+				setInterval(function(){
+					//获取系统时间
+					var now_date = new Date();
+					//获取倒计时的毫秒数
+					var deadlineMilliseconds = deadlineDate.getTime() - now_date.getTime();
+					//天数
+					var dates = parseInt(deadlineMilliseconds/86400000);
+					//小时
+					var hours = parseInt(deadlineMilliseconds%86400000/3600000);
+					//分钟
+					var minutes = parseInt(deadlineMilliseconds%86400000%3600000/60000);
+					//秒数
+					var seconds = parseInt(deadlineMilliseconds%86400000%3600000%60000/1000);
+					//拿到每个ul的轮播数字的数组
+					var time = ["天","数","小","时","分","钟","秒","数"];
+					time[0] = parseInt(dates/10);
+					time[1] = dates%10;
+					time[2] = parseInt(hours/10);
+					time[3] = hours%10;
+					time[4] = parseInt(minutes/10);
+					time[5] = minutes%10;
+					time[6] = parseInt(seconds/10);
+					time[7] = seconds%10;
+					//轮播事件
+					$(ul).each(function(i,e){
+						$(e).children().eq(time[i]).show().siblings().slideUp();
+					})
+				},1000);
+			}
+			//放时间的ul或者其他标签
+			var myul = "#box>ul";
+			//获取截止时间
+			var deadlineDates = "2020/11/20";
+			//函数调用
+			setDeadLineTime(myul,deadlineDates);
+			
+		</script>
+	</body>
+</html>

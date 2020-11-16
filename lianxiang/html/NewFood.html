@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="js/style.js"></script> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/aifood.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/luanxie.js"></script>
+    <link rel="stylesheet" href="../js/swiper-master/package/swiper-bundle.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href=""><img src="https://p1.lefile.cn/product/adminweb/2018/12/13/2d4534f6-29f3-4a05-8e68-97d9904c7bd2.png" alt="" class="logo0"></a></div>
+        <div class="header_top">
+            <div class="header_top_mid">
+            <ul>
+                <li><a href="">联想首页</a></li>
+                <li><a href="">商城</a></li>
+                <li><a href="">品牌</a></li>
+                <li><a href="">服务</a></li>
+                <li><a href="">社区</a></li>
+                <li><a href="">门店</a></li>
+                <li><a href=""><span>下载app
+                    <img src="https://p2.lefile.cn/product/adminweb/2020/04/17/3300a5a4-7180-4e0c-a151-223139e2a0c0.png" alt="">
+                </span></a></li>
+            </ul>
+            <div class="header_top_right">
+                <div class="heade_land">
+                    <a href="">注册</a>
+                    <i>|</i>
+                    <a href="">登陆</a>
+                    <i class="qipao"><a href="">注册送688元大礼包<img src="https://p2.lefile.cn/product/adminweb/2019/01/18/fbd80d7a-1078-42cd-9558-53e374aada77.png" alt=""></a></i>
+                </div>
+                <div class="heade_phone">
+                    <img src="https://p1.lefile.cn/product/adminweb/2019/01/18/c8f87ce8-1e14-4bb3-854e-f86af0f07072.png" alt="" class="phone1">
+                    <div class="phone22">
+                        <img src="https://p2.lefile.cn/product/adminweb/2020/04/17/5ce4890a-c091-46b4-aabb-8cf49320d08b.png" alt="">
+                        <span>联想智选APP </span>
+                        <p>下载即享 <br>688元新人礼</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="header_bottom_mid">
+                <ul>
+                    <li><a href="shuangshiyi.html" target="_blank">11.11</a></li>
+                    <li><a href="">新品</a></li>
+                    <li><a href="">定制</a></li>
+                    <li><a href="">以旧换新</a></li>
+                    <li><a href="">新品试用</a></li>
+                    <li><a href="">积分购</a></li>
+                    <li><a href="Student.html" target="_blank">学生</a></li>
+                    <li><a href="">直播</a></li>
+                    <li><a href="">企业购</a></li>
+                    <li><a href="">9.9元</a></li>
+                </ul>
+
+                <div class="sea" >
+                    <input type="text" name="" id=""  value="">
+                    <a href=""><span style="background-image: url(https://p4.lefile.cn/product/adminweb/2018/12/29/f26ff743-3f82-4072-b27a-193f0e9ad675.png);"></span></a>
+                </div>
+                <div class="header_top_right">
+                    <div class="heade_land">
+                        <a href="" class="sea_fangdajing"><span style="background-image: url(https://p4.lefile.cn/product/adminweb/2018/12/29/f26ff743-3f82-4072-b27a-193f0e9ad675.png);"></span></a>
+                        <a href="register.html" target="_blank">注册</a>
+                        <i>|</i>
+                        <a href="">登陆</a>
+                        <i class="qipao"><a href="">注册送688元大礼包<img src="https://p2.lefile.cn/product/adminweb/2019/01/18/fbd80d7a-1078-42cd-9558-53e374aada77.png" alt=""></a></i>
+                    </div>
+                    <div class="heade_phone">
+                        <img src="https://p1.lefile.cn/product/adminweb/2019/01/18/c8f87ce8-1e14-4bb3-854e-f86af0f07072.png" alt="" class="phone1">
+                        <div class="phone22">
+                            <img src="https://p2.lefile.cn/product/adminweb/2020/04/17/5ce4890a-c091-46b4-aabb-8cf49320d08b.png" alt="">
+                            <span>联想智选APP </span>
+                            <p>下载即享<br>688元新人礼</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+	$(window).scroll(function(){
+		if($(window).scrollTop()>70){
+			$(".header_top").hide();
+            $(".header_bottom").css({"position":"fixed","z-index":"20","height":"50px","line-height":"50px"});
+            $(".header_bottom>.header_bottom_mid>ul>li").css({"line-height":"50px"});
+            $(".logo").css({"position":"fixed","z-index":"21"});
+            $(".header_bottom_mid>.header_top_right").show()
+            $(".sea").hide();
+            
+        }if($(window).scrollTop()<69){
+            $(".header_top").show();
+            $(".header_bottom").css({"position":"static","z-index":"20","height":"70px","line-height":"70px"});
+            $(".header_bottom>.header_bottom_mid>ul>li").css({"line-height":"70px"});
+            $(".logo").css("position","static");
+            $(".header_bottom_mid>.header_top_right").hide()
+            $(".sea").show();
+        }
+        })
+</script>
+<!-- 顶部结束 -->
+    <div  class="list_content" style="width: 100%;">
+        <div class="content" id="content">
+            <ul>
+                <li><a herf="#">个人及家庭产品</a></li>
+                <li><a herf="#">中小企业产品</a></li>
+                <li><a herf="#">这政企大客户产品</a></li>
+                <li><a herf="#">数据中心产品</a></li>
+                <li><a herf="#">行业只能软件产品</a></li>
+            </ul>
+        </div>
+    <div id="block">
+        <div class="Tab" id="one" style="display: block;">
+            <ul>
+                <li>
+                <img src="https://p4.lefile.cn/fes/cms/2020/04/08/s6zpki0pv388hptvvv17981re615el674750.png">
+                <p>lenvov台式机</p>
+                </li>
+                <li>
+                <img src="https://p2.lefile.cn/fes/cms/2020/04/08/uha1lyckunvqbcxxedh1almpd40un8852769.png">
+                <p>Lenovo 笔记本</p>
+                </li>
+                <li>
+                <img src="https://p2.lefile.cn/fes/cms/2020/04/08/8s2but0nyymqy4dz81exj6efp1kqy1623555.png">
+                <p>ThinkPad 电脑</p>
+                </li>
+                <li>
+                <img src="https://p2.lefile.cn/fes/cms/2020/10/29/ed45uwv36hpbiirkq9o5jko4r7vs7f313197.png">
+                <p>网课平板</p>
+                </li>
+                <li>
+                <img src="https://p4.lefile.cn/fes/cms/2020/10/29/3ej4fizsmj6gvqc3m6ujhs0w471r8b516355.png">
+                <p>手机</p>
+                </li>
+                <li>
+                <img src="https://p1.lefile.cn/fes/cms/2020/10/29/pbveu9awz61l7k2kjkau22etlosdz1220039.png">
+                <p>选件/服务</p>
+                </li>
+                <li>
+                <img src="https://p1.lefile.cn/fes/cms/2020/10/29/0r8w9kimha205ywvo6vbpk4cmc9rbt069653.png">
+                <p> 智能产品</p>
+                </li>
+            </ul>
+        </div>
+        <div class="Tab" id="two">
+            <ul>
+                <li style="width: 300px;">
+                <img src="https://p3.lefile.cn/fes/cms/2020/08/02/9vljerdyu97aok8mjj6egn0kti7nju116640.png  ">
+                <p>扬天</p>
+                </li>
+                <li style="width: 300px;">
+                <img src="https://p3.lefile.cn/fes/cms/2020/08/02/t5mpjdad326sk0l934hh286ls5uxl4022028.png">
+                <p>ThinkPad</p>
+                </li>
+                <li style="width: 300px;">
+                <img src="https://p1.lefile.cn/fes/cms/2020/08/02/wxyhmup4yxwer8wq9opg6qbopsmm1f951301.png">
+                <p>配件/办公</p>
+                </li>
+                <li style="width: 300px;">
+                <img src="https://p2.lefile.cn/fes/cms/2020/08/02/t1o6kie1vaw5oeoaaeynfcf5z7gow7258971.png">
+                <p>解决方案</p>
+                </li>
+            </ul>
+        </div>
+        <div class="Tab" id="three">
+            <ul>
+                <li  style="width: 240px;">
+                <img src="https://p4.lefile.cn/fes/cms/2020/04/08/k8hgb4nv26swm9xl06sb5t0w9flzqg697820.png">
+                <p>商用电脑</p>
+                </li>
+                <li  style="width: 240px;">
+                <img src="https://p4.lefile.cn/fes/cms/2020/05/28/2379gjq01si7czrvc3e13q4b4y8lo0571013.png">
+                <p>商用IOT</p>
+                </li>
+                <li  style="width: 240px;">
+                <img src="https://p3.lefile.cn/fes/cms/2020/05/28/r8m9umei5tzp1rls8hswv0ubygdv84683691.png">
+                <p>商用解决方案</p>
+                </li>
+                <li  style="width: 240px;">
+                <img src="https://p1.lefile.cn/fes/cms/2020/05/28/gzklg2fvsiykni0m61hbnncybplhy9826803.png">
+                <p>联想E采</p>
+                </li>
+                <li  style="width: 240px;">
+                <img src="https://p3.lefile.cn/fes/cms/2020/05/28/r4px9vbp9r83459qm8lhoic4m5mks7563070.png">
+                <p>商用服务</p>
+                </li>
+            </ul>
+        </div>
+        <div class="Tab" id="four">
+            <ul>
+                <li style="width: 600px;">
+                <img src="https://p4.lefile.cn/fes/cms/2020/04/08/08dkha7nejt5862i4pxdpvgi3eqdw4478557.png">
+                <p>数据中心产品</p>
+                </li>
+                <li style="width: 600px;">
+                <img src="https://p4.lefile.cn/fes/cms/2020/04/08/cezxv5wxf4tdv5877vln3tsgrm6ef0863818.png">
+                <p>数据中心解决方案</p>
+                </li>
+            </ul>
+        </div>
+        <div class="Tab" id="five">
+            <ul>
+                <li style="width: 600px;">
+                <img src="https://p1.lefile.cn/fes/cms/2020/05/06/9rkxu31sm4dmgk7sgcrilqojevn6ez276183.png">
+                <p>Leap平台级软件产品</p>
+                </li>
+                <li style="width: 600px;">
+                <img src="https://p4.lefile.cn/fes/cms/2020/05/06/hy8eekz0fxfn6k5twbffnqg8am48pj156624.png">
+                <p>专业技术服务</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+        <div class="block" style="display: block;">
+            <!-- 第一个 -->
+                <div class="com" style="display: block;">
+                    <ul>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/09/10/klmynil5wkqphgdqku0xwb0sx7apee905782.png">
+                        <div class="font_conent">
+                            <p>小新 Air15 2021款 英特尔酷睿i5 15.6英寸全面屏轻薄笔记本 银色</p>
+                            <p>第十一代英特尔酷睿i5-1135G7/Windows 10 家庭中文版/15.6英寸/16G/512G SSD/GeForce MX450 2G独显/银色</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>2999</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p4.lefile.cn/fes/cms/2020/09/15/y725ldszea2u8wa2gtqdepsmozl1fs907269.png">
+                        <div class="font_conent">
+                            <p>拯救者 刃9000 十代英特尔酷睿i7 2020 分体台式机 黑色</p>
+                            <p>十代英特尔酷睿i7-10700KF/i7-10700K/Windows 10 家庭中文版/16G/512 SSD/GeForce RTX 2070 /黑色</p>
+                            <p  style="position: relative;left: 0; font-size: 20px;">￥<strong>8699</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/10/19/9d1l63wyvsq51qsgjyhgjdyp2nle0e727204.png">
+                        <div class="font_conent">
+                            <p>拯救者 刃7000P 进阶版 分体式台式机 黑色</p>
+                            <p>RYZEN_5_3600/Windows 10 家庭中文版/16G/ 512G SSD/RTX2060_CD_6GB/黑色</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>5999</strong></p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第二个 -->
+                    <div class="com">
+                    <ul>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/11/03/iztyomqlx7sqtxlpmwas7oxmc15rka301125.png">
+                        <div class="font_conent">
+                            <p>小新 Air15 2021款 英特尔酷睿i5 15.6英寸全面屏轻薄笔记本 银色</p>
+                            <p> 第十一代英特尔酷睿i5-1135G7/Windows 10 家庭中文版/15.6英寸/16G/512G SSD/GeForce MX450 2G独显/银色</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>5499</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/11/03/fvc1cktdsa4me5resdgacaaqe7vgb1391617.png">
+                        <div class="font_conent">
+                            <p>YOGA 13s 2021款英特尔Evo平台 13.3英寸全面屏轻薄笔记本 深空灰</p>
+                            <p>第十一代英特尔酷睿i5-1135G7/Windows 10 家庭中文版/13.3英寸/16G/512G SSD/集成显卡/深空灰</p>
+                            <p  style="position: relative;left: 0; font-size: 20px;">￥<strong>5499</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/10/21/ik6xkhpfnf9rpks5ljo2euhz6d6xu1997572.png">
+                        <div class="font_conent">
+                            <p>YOGA14s 2021性能版英特尔酷睿i5 14英寸全面屏轻薄笔记本 深空灰</p>
+                            <p> 第十一代英特尔酷睿i5-1135G7/Windows 10 家庭中文版/14.0英寸/16G/512G SSD/集成显卡/深空灰</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>5699</strong></p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第三个 -->
+                    <div class="com">
+                    <ul>
+                        <li>
+                        <img src="https://p4.lefile.cn/fes/cms/2020/08/28/7bhk5ac2ckqlt5sixdq4lh00nrs2ey316515.png">
+                        <div class="font_conent">
+                            <p>ThinkPad X1 Carbon2020英特尔酷睿i7笔记本20U9A004CD沉浸黑</p>
+                            <p> 全新十代英特尔酷睿i7-10710U/Windows 10家庭中文版/16GB/512GB SSD/英特尔® UHD 显示芯片/14英寸FHD IPS LED背光显示屏/沉浸黑</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>12999</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p4.lefile.cn/fes/cms/2020/09/10/i6mi05jeq9jxipjujxel8wm0r4elqf996958.png">
+                        <div class="font_conent">
+                            <p>ThinkPad T14 锐龙版笔记本电脑 20UD0003CD</p>
+                            <p> 联想 移动硬盘 抗压抗震设计Windows/Mac多系统兼容小巧身材轻薄  稳定便携联想原装品质  值得信赖高速3.0高速传输</p>
+                            <p  style="position: relative;left: 0; font-size: 20px;">￥<strong>5499</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/10/19/m5t1b0mus2g0jhk9csx3paw4gn9ur8793942.jpg">
+                        <div class="font_conent">
+                            <p>【王源推荐】全新ThinkBook 14 锐龙版 锐智系创造本 04CD</p>
+                            <p> AMD锐龙5 4600U移动处理器/Windows 10 家庭中文版/16GB/512GB SSD/核心显卡（Radeon Graphics）/14英寸 FHD LED背光显示屏（100% sRGB高色域/TUV低蓝光认证）指纹解锁一键开机/银灰色</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>4599</strong></p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第四个 -->
+                    <div class="com">
+                    <ul>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/10/29/1ug29v263its1kprip38fomzg43tbn072047.png">
+                        <div class="font_conent">
+                            <p>联想平板小新Pad Pro 11.5英寸 影音娱乐办公学习平板电脑 深空灰</p>
+                            <p> Qualcomm® Snapdragon™ 730G/8核/Android系统/11.5英寸/6G/128G/WIFI版/深空灰</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>2299</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/10/29/hnn9ppvlwhcahtoofz6ltc7tueldjg395728.png">
+                        <div class="font_conent">
+                            <p>联想平板小新Pad 11英寸 学习娱乐平板电脑 深空灰</p>
+                            <p> Qualcomm® Snapdragon™ 662/8核/Android系统/11英寸/6G/128G/WIFI版/深空灰</p>
+                            <p  style="position: relative;left: 0; font-size: 20px;">￥<strong>1499</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/10/29/v7b8sg0lxrgnp6bh8j00yhj4nc8321975729.png">
+                        <div class="font_conent">
+                            <p>联想M10 PLUS平板电脑 4G+64GB 10.3英寸学生护眼pad 网课WIFI版</p>
+                            <p> MediaTek P22T/8核/Android系统/10.3英寸/4G/64G/WIFI版/枪灰色/网课平板</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>1099</strong></p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第五个 -->
+                    <div class="com">
+                    <ul>
+                        <li>
+                        <img src="https://p4.lefile.cn/fes/cms/2020/10/29/yyc3tdlfmbbhhussvuloyete1gk34w147154.jpg">
+                        <div class="font_conent">
+                            <p>motorola 摩托罗拉 刀锋 5G 8GB+256GB 锋雅黑</p>
+                            <p>5G刀锋折叠屏 | 双屏双视界 | 无缝无折痕 | 4800万像素超强自拍</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>12499</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/10/31/o3ca7he6kyna6jxl8gxx6p89wmuj9h053970.png">
+                        <div class="font_conent">
+                            <p>拯救者电竞手机Pro 12GB+128GB 炽焰战甲</p>
+                            <p> 90W超高速闪充/骁龙865plus旗舰处理器/双X轴线性马达/3D中置双热管双向液冷散热/144Hz电竞屏/横屏UI设计</p>
+                            <p  style="position: relative;left: 0; font-size: 20px;">￥<strong>3749</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/11/05/c3w48ut6kro6rmbpr2xyd5s2d648rc648764.png">
+                        <div class="font_conent">
+                            <p>拯救者电竞手机Pro 16GB+512GB 至尊透明版 太空无垠</p>
+                            <p> 次世代中置架构/高通骁龙865 Plus旗舰处理器/90W 超级闪充/双X 轴线性马达/144Hz电竞屏/横屏UI设计/主播级中置前摄</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>5999</strong></p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第六个 -->
+                    <div class="com">
+                    <ul>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/11/05/o4xvfxye125wutu0v49154sgy5bonm649940.png">
+                        <div class="font_conent">
+                            <p>联想 USB3.0 移动硬盘F308 黑 2TB</p>
+                            <p> 联想 移动硬盘 抗压抗震设计Windows/Mac多系统兼容小巧身材轻薄  稳定便携联想原装品质  值得信赖高速3.0高速传输</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>379</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/10/29/ihxy6z0gxd8lm8hhk2he1hwwtrgs0j898329.png">
+                        <div class="font_conent">
+                            <p>联想无线静音鼠标N911 Pro 黑色（送电脑远程调修服务）</p>
+                            <p> 静音按键，经久耐用，超300万次点击，免开关，自动省电休眠，侧裙/底部防滑设计，人体工学，饱满曲线，舒适质感，一键触发人工服务。</p>
+                            <p  style="position: relative;left: 0; font-size: 20px;">￥<strong>49</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/10/29/ng2naki21ls8zrzmfzld81rao32pt2538954.png">
+                        <div class="font_conent">
+                            <p>联想都市简约手提内胆包B11 灰黑色（送电脑远程调修服务）</p>
+                            <p> 大容量、轻重量，笔记本电脑、鼠标、移动电源、适配器等轻松放入；隐藏式提手、内衬短毛绒布、防泼溅面料。赠：1次价值98元电脑远程调修服务</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>79</strong></p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第七个 -->
+                    <div class="com">
+                    <ul>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/10/29/1yscr0902m3x30lwwz1qq9sawhnqyf162072.png">
+                        <div class="font_conent">
+                            <p>联想智能投影仪Air5（樱花白）</p>
+                            <p>1080P大屏教学,自动对焦,金属支架转轴,四边散热工艺,可磁吸遥控器,健康舒适小巧便携</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>2799</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p4.lefile.cn/fes/cms/2020/10/29/udm9fqjxdfxz68vobhdnlon7hau0lb826645.png">
+                        <div class="font_conent">
+                            <p>联想“看家宝”智能摄像机R1</p>
+                            <p> 超高清1080P云台版 H.265编码 人工智能声音识别 智能监控隐私遮蔽</p>
+                            <p  style="position: relative;left: 0; font-size: 20px;">￥<strong>229</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/10/29/nireewrmbtgnlasdqgzkv2rmx4uqdb070845.png">
+                        <div class="font_conent">
+                            <p>智能体脂秤Mini E2</p>
+                            <p> 全家使用 20项核心指标测量 不连手机也可读取体脂率，云存储同步 体重秤男女健康减肥 一年换新质保售后无忧</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>79</strong></p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    <!-- 中小企业产品 -->
+    <!-- 第一个 -->
+    <div class="block">
+                    <div class="com_two">
+                    <ul>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/10/30/v3o5cpieqrqu3ok5kp6w40zch3h9lk414016.png">
+                        <div class="font_conent">
+                            <p>扬天 威6 2020 14英寸酷睿版 英特尔酷睿i5 商用笔记本电脑</p>
+                            <p> 全新第十代智能英特尔酷睿i5-1035G1/Windows10家庭中文版/8G/512G SSD/AMD Radeon 630 2G/14英寸FHD IPS LED背光显示屏/2年上门保修+即刻响应</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>4200</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/10/30/1f3s6j3kg56xxor3wx9aphvsfgfyle118358.png">
+                        <div class="font_conent">
+                            <p>扬天 威6 2020 15英寸 英特尔酷睿i7商用笔记本相思灰</p>
+                            <p> 全新十代英特尔酷睿i7-10510U/Windows 10家庭中文版/8G/512G SSD/AMD Radeon 620独立显卡/15.6英寸 FHD超清 IPS防眩光屏/相思灰</p>
+                            <p  style="position: relative;left: 0; font-size: 20px;">￥<strong>5699</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/08/20/kisn08jrtzlzbeocbzcomw6y2nfcpj510810.jpg">
+                        <div class="font_conent">
+                            <p>扬天M5900d AMD锐龙3 商用台式机电脑 分体台式机90LG000DCD</p>
+                            <p> R3-3200/Windows 10家庭中文版/8G DDR4/1T HD/无光驱/集成显卡</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>2699</strong></p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第二个 -->
+                    <div class="com_two">
+                    <ul>
+                        <li>
+                        <img src="https://p4.lefile.cn/fes/cms/2020/10/13/l0risomkfu7hf78ut574tzc96gaoox496884.jpg">
+                        <div class="font_conent">
+                            <p>ThinkPad X1Carbon2020英特尔酷睿i5笔记本电脑20U9A005CD沉浸黑</p>
+                            <p> 全新十代英特尔酷睿i5-10210U/Windows 10家庭中文版/16GB/512GB SSD/英特尔® UHD 显示芯片/14英寸FHD IPS LED背光显示屏/wifi版/沉浸黑</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>10999</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/08/02/7zqhyts1icpimx45230t7vpkv3mijf646795.jpg">
+                        <div class="font_conent">
+                            <p>ThinkPad X13 LTE版 英特尔酷睿i5 笔记本电脑 20T2A009CD</p>
+                            <p> 全新十代英特尔酷睿i5-10210U/Windows 10家庭中文版/8GB/256GB SSD/英特尔 UHD 620显示芯片/13.3英寸FHD LED背光显示屏/LTE版</p>
+                            <p  style="position: relative;left: 0; font-size: 20px;">￥<strong>6999</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/10/30/lfkk7rhh7b812uuqwzeixbd40yf060368042.png">
+                        <div class="font_conent">
+                            <p>ThinkPad T14 酷睿版 英特尔酷睿i5 笔记本电脑 20S0A007CD</p>
+                            <p> 全新十代英特尔酷睿i5-10210U/Windows 10家庭中文版/8GB+8GB/512GB SSD/NVIDIA GeForce MX330 2GB DDR5独立显存/14英寸FHD 防眩光雾面屏</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>8999</strong></p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第三个 -->
+                    <div class="com_two">
+                    <ul>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/08/02/qiwmigbbn7neqzfg0dtjdlph24e6mt561082.jpg">
+                        <div class="font_conent">
+                            <p>thinkplus 口红电源 黑 USB-C 65W</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>249</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/08/25/vnlvw3wssplknsi3minexstfh399e4759982.png">
+                        <div class="font_conent">
+                            <p>thinkplus无线鼠标E3</p>
+                            <p  style="position: relative;left: 0; font-size: 20px;">￥<strong>49</strong></p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p4.lefile.cn/fes/cms/2020/08/02/ges0gjv8rldcwe1oue3bknmvit85s2302760.png">
+                        <div class="font_conent">
+                            <p>联想（Lenovo)L27i 27英寸全高清超窄边电脑显示器</p>
+                            <p>27英寸全高清超窄边框</p>
+                            <p  style="position: relative; left: 0; font-size: 20px;">￥<strong>1099</strong></p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第四个 -->
+                    <div class="com_two">
+                    <ul>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/08/02/niq0geg3a42kcwoksc8wf79na9vicg147980.jpg">
+                        <div class="font_conent">
+                            <p>远程办公解决方案</p>
+                            <p>独立域名的企业邮箱，永远使用最新版Office软件，最多可支持250人音视频会议</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/08/02/r18dkgc9x5bryildfckk0c8dspz1oy056307.jpg">
+                        <div class="font_conent">
+                            <p>智能工位解决方案</p>
+                            <p>灵活预定工位，降低资源浪费，可视化数据分析预测，降低行政管理成本</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/08/02/ywvm5oh62ebuidb32bmxykhy6yoz0s909993.jpg">
+                        <div class="font_conent">
+                            <p>联想百应净水服务</p>
+                            <p>插电可用免安装/源废水分离/led杀菌/即热即饮/led冷光抑菌</p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+        </div> 
+    <!-- 政企大客户产品 -->
+    <!-- 第一个 -->
+    <div class="block">
+                <div class="com_three">
+                    <ul>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/04/08/g3oulq4cy4irjdrl90lu5vohup2ez7882094.jpg">
+                        <div class="font_conent">
+                            <p>工作站P328</p>
+                            <p> 释放才华万千</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/04/08/1e20krjgyyj9gl21dpedqgvtnyzsq8680792.jpg">
+                        <div class="font_conent">
+                            <p>昭阳K4</p>
+                            <p>十代酷睿 强劲性能</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/04/08/aam1zxy4wmswrny0elhlku08t3w9il869604.jpg">
+                        <div class="font_conent">
+                            <p>ThinkCentreM720e</p>
+                            <p>卓越非凡 快速交付</p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第二个 -->
+                    <div class="com_three">
+                    <ul>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/06/02/030b9wu22tr1cj15tvx2d60lrgm2mt046022.jpg">
+                        <div class="font_conent">
+                            <p>ECI系列工业计算设备</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p4.lefile.cn/fes/cms/2020/06/02/lc6suymf2l1ehhwtyy5jn62xzyhpv1084628.jpg">
+                        <div class="font_conent">
+                            <p>ECB系列边缘计算板卡</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/06/02/3ixvvvpi6fnvepxpgc8lav0xdan6g9735107.jpg">
+                        <div class="font_conent">
+                            <p>ECE系列 嵌入式计算设备</p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第三个 -->
+                    <div class="com_three">
+                    <ul>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/05/28/0eau02shdc4nb2gc845jhjsc4xlfoz317518.jpg">
+                        <div class="font_conent">
+                            <p>政府行业</p>
+                            <p>联想政府行业解决方案</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/05/28/evaz2lt9lz0nq1sit9hha5cqah0qg0264491.jpg">
+                        <div class="font_conent">
+                            <p>教育行业</p>
+                            <p>联想智慧教育解决方案</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/05/28/8k8bqfrv12pd6ex1np7er8wdkvhfz1031780.jpg">
+                        <div class="font_conent">
+                            <p>制造行业</p>
+                            <p>联想制造行业解决方案</p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第四个 -->
+                    <div class="com_three">
+                    <ul>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/06/02/63s4ha4f5dmphe273112uaom4003g7169554.jpg">
+                        <div class="font_conent">
+                            <p>易捷办公</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/06/02/7kdt74h10kl3vy1f2kzcqc0hqm0hof699405.jpg">
+                        <div class="font_conent">
+                            <p>笔记本</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/06/02/r9btzv2yorax2phyagqv2jppy3ybvm053330.jpg">
+                        <div class="font_conent">
+                            <p>台式机/一体机</p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第五个 -->
+                    <div class="com_three">
+                    <ul>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/06/02/vc2mccaog33jw5wlex3k3koftcrobv646368.jpg">
+                        <div class="font_conent">
+                            <p>智慧化转型服务</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/06/02/g826t5c814bxln7hwrafvk8d16sji6643601.jpg">
+                        <div class="font_conent">
+                            <p>智能IoT服务</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/06/02/rxpi2wxuohpfi15oq7aso8nq64mmgp769420.jpg">
+                        <div class="font_conent">
+                            <p>IT管理服务</p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    <!-- 数据中心产品 -->
+    <!-- 第一个 -->
+    <div class="block">
+              <div class="com_four">
+                    <ul>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/04/08/mogwyfr2w7qz8sji1pp5bwxu89p68m149464.jpg">
+                        <div class="font_conent">
+                            <p>ThinkSystem SR650 服务器</p>
+                            <p>面向高速发展的数据中心</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/04/08/f8d7rkotxkbx1h3n54z48s7hg3sc18344624.jpg">
+                        <div class="font_conent">
+                            <p>ThinkSystem DM / DE 系列</p>
+                            <p>无缝扩展存储，加速数据性能</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/04/08/jy0njoxp0k2gptug3g03pofn3ihiki288062.jpg">
+                        <div class="font_conent">
+                            <p>ThinkSystem SR950 服务器</p>
+                            <p>x86平台上“始终如一”的高可用性</p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第二个 -->
+                    <div class="com_four">
+                    <ul>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/04/08/pfh544hducwrkskufdju6hlkku6tmt720223.jpg">
+                        <div class="font_conent">
+                            <p>制造行业</p>
+                            <p>推动制造企业产业升级，加速转型</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p4.lefile.cn/fes/cms/2020/04/08/u4oy6y6kl09d11u8xwhy9nxm0e7vki171462.jpg">
+                        <div class="font_conent">
+                            <p>能源行业</p>
+                            <p>提供定制化、智能信息化解决方案</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/04/08/9yelnbkpy5x781xyo34i5g5iswq52h562440.jpg">
+                        <div class="font_conent">
+                            <p>云计算</p>
+                            <p>降低IT成本，促进科技创新</p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    <!-- 行业只能软件产品 -->
+    <!-- 第一个 -->
+    <div class="block">
+                    <div class="com_five">
+                    <ul>
+                        <li>
+                        <img src="https://p4.lefile.cn/fes/cms/2020/05/06/t60e8m1tuai8j2z4t1k469y3he6vu9505477.png">
+                        <div class="font_conent">
+                            <p>LeapIOT</p>
+                            <p>联想工业物联网平台</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p1.lefile.cn/fes/cms/2020/05/06/j75r0gwvhxr4hr1x87tk26w096hmpj597283.png">
+                        <div class="font_conent">
+                            <p>LeapHD</p>
+                            <p>联想大数据平台</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p4.lefile.cn/fes/cms/2020/05/06/3sk28ob74gx3bmfv7ty4i1584vv5hk472785.png">
+                        <div class="font_conent">
+                            <p>LeapAI</p>
+                            <p>联想企业级人工智能平台</p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    <!-- 第二个 -->
+                    <div class="com_five">
+                    <ul>
+                        <li>
+                        <img src="https://p2.lefile.cn/fes/cms/2020/05/06/9u7ae00pryizqgu6c0v91ii1mnymk8038501.png">
+                        <div class="font_conent">
+                            <p>数据智能规划设计</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p4.lefile.cn/fes/cms/2020/05/06/rd7cs8xjjfsqzd74zb7iy8g195z2op105782.png">
+                        <div class="font_conent">
+                            <p>核心平台建设</p>
+                        </div>
+                        </li>
+                        <li>
+                        <img src="https://p3.lefile.cn/fes/cms/2020/05/06/i2lrnxwjiax9nditp3fsnkdsyfmdsh217318.png">
+                        <div class="font_conent">
+                            <p>智能化创新应用</p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+    </div>
+</body>
+</html>

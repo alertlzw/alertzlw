@@ -1,0 +1,215 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-style: normal;
+}
+header{
+    height: 120px;
+    width: 100%;
+    /* background: red; */
+}
+header>.header_top{
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    z-index: 21;
+}
+.logo>a>.logo0{
+    height: 50px;
+    float: left;
+}
+header>.header_top>.header_top_mid{
+    height: 50px;
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+header>.header_top>.header_top_mid>ul{
+    list-style: none;
+}
+header>.header_top>.header_top_mid>ul>li{
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    margin-right: 20px;
+    position: relative;
+}
+header>.header_top>.header_top_mid>ul>li>a{
+    text-decoration: none;
+    color: rgb(138, 138, 138);
+}
+header>.header_top>.header_top_mid>ul>li>a>span{
+    color: red;
+
+}
+header>.header_top>.header_top_mid>ul>li>a>span>img{
+    position: absolute;
+    top: 43px;
+    width: 233px;
+    height: 124px;
+    left: -35px;
+    display: none;
+}
+header>.header_top>.header_top_mid>ul>li:hover>a>span>img{
+    display: block;
+}
+.header_top_right{
+    height: 50px;
+    float: right;
+    text-align: 50px;
+    position: relative;
+}
+.header_top_right>.heade_phone{
+    width: 50px;
+    height: 50px;
+    float: right;
+    text-align: center;
+    line-height: 50px;
+}
+.header_top_right>.heade_phone>.phone1{
+    width: 23px;
+    height: 23px;
+    position: relative;
+    top: 5px;
+}
+.header_top_right>.heade_phone>.phone22{
+    background: #fff;
+    position: absolute;
+    top: 35px;
+    right: -129px;
+    z-index: 9;
+    width: 198px;
+    padding-top:14px ;
+    box-sizing: border-box;
+    display: none;
+}
+.header_top_right>.heade_phone:hover>.phone22{
+    display: block;
+}
+.header_top_right>.heade_phone>.phone22>img{
+    width: 80px;
+    height: 80px;
+    
+   
+}
+.header_top_right>.heade_phone>.phone22>span{
+    font-size: 13px;
+    width: 80px;
+    
+    margin-top: 5px;
+    margin-left: 10px;
+    
+    position: relative;
+    top: -60px;
+    
+}
+.header_top_right>.heade_phone>.phone22>p{
+    color: red;
+    font-size: 13px;
+    width: 80px;
+    margin-top: 10px;
+    line-height: 14px;
+    /* display: inline-block; */
+    float: right;
+    position: absolute;
+    top: 38px;
+    right: 14px;
+}
+.header_top_right>.heade_land{
+    float: left;
+   line-height: 50px;
+    
+}
+.header_top_right>.heade_land>a{
+    text-decoration: none;
+    color: black;
+
+    
+}
+.header_top_right>.heade_land>.qipao{
+    background-image: url(../img/dd/jsqpk.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 157px;
+    height: 33px;
+    position: absolute;
+    top: 35px;
+    left: -42px;
+    padding: 0px 0px 0px 10px;
+    z-index: 8;
+    line-height: 33px;
+}
+.header_top_right>.heade_land>.qipao>a{
+    text-decoration: none;
+    font-size: 13px;
+    color:#ba9964 ;
+}
+.header_top_right>.heade_land>.qipao>a>img{
+    width: 22px;
+    height: 22px;
+    position: relative;
+    top: 6px;
+    left: 8px;
+}
+header>.header_bottom{
+    height: 70px;
+    width: 100%;
+    background: #e0e0e0;
+    position: static;
+}
+header>.header_bottom>.header_bottom_mid{
+    width: 1200px;
+    height: 70px;
+    margin: 0 auto ;
+}
+header>.header_bottom>.header_bottom_mid>ul>li{
+    list-style: none;
+    float: left;
+    margin-right: 45px;
+    line-height: 70px;
+}
+header>.header_bottom>.header_bottom_mid>ul>li>a{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+header>.header_bottom>.header_bottom_mid>.sea{
+    float: right;
+    line-height: 70px;
+    margin-right: 19px;
+    border-radius: 25px;
+    position: relative;
+}
+header>.header_bottom>.header_bottom_mid>.sea>input{
+    width: 250px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.829);
+    border: 0;
+    outline:none;
+}
+header>.header_bottom>.header_bottom_mid>.sea>a>span{
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 26px;
+    right: 20px;
+    z-index: 1;
+    display: block;  
+}
+header>.header_bottom>.header_bottom_mid>.header_top_right{
+    display: none;
+}
+.sea_fangdajing>span{
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 16px;
+    right: 141px;
+    z-index: 1;
+    /* display: block;   */
+}

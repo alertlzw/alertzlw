@@ -1,0 +1,53 @@
+			#box{
+				overflow: hidden;
+				width: 400px;
+				position: relative;
+				left: 57%;
+				top: -15px;
+				transform: translate(-50%,-50%);
+			}
+			#box>ul{
+				width: 25px;
+				height: 35px;
+				float: left;
+			}
+			#box>ul>li{
+				list-style: none;
+				width: 25px;
+				height: 35px;
+				position: absolute;
+				box-sizing: border-box;
+				background-color: white;
+				color: white;
+				line-height: 35px;
+				text-align: center;
+				bottom: 0px;
+				background: rgb(63,63,63);
+				font-size: 30px;
+			}
+			#box>ul:nth-of-type(2n){
+				margin-right: 10px;
+			}
+			#box>ul:nth-of-type(2n+1){
+				margin-left: 30px;
+			}
+			#t{
+				position: absolute;
+			    left: 160px;
+			    bottom: 89px;
+			}
+			#shi{
+				position: absolute;
+			    left: 252px;
+			    bottom: 89px;
+			}
+			#fen{
+				position: absolute;
+			    left: 341px;
+			    bottom: 89px;
+			}
+			#miao{
+				position: absolute;
+			    left: 430px;
+			    bottom: 89px;
+			}

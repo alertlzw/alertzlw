@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/aifood.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/swiper-master/package/swiper-bundle.js"></script>
+    <link rel="stylesheet" href="../js/swiper-master/package/swiper-bundle.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href=""><img src="https://p1.lefile.cn/product/adminweb/2018/12/13/2d4534f6-29f3-4a05-8e68-97d9904c7bd2.png" alt="" class="logo0"></a></div>
+        <div class="header_top">
+            <div class="header_top_mid">
+            <ul>
+                <li><a href="">联想首页</a></li>
+                <li><a href="">商城</a></li>
+                <li><a href="">品牌</a></li>
+                <li><a href="">服务</a></li>
+                <li><a href="">社区</a></li>
+                <li><a href="">门店</a></li>
+                <li><a href=""><span>下载app
+                    <img src="https://p2.lefile.cn/product/adminweb/2020/04/17/3300a5a4-7180-4e0c-a151-223139e2a0c0.png" alt="">
+                </span></a></li>
+            </ul>
+            <div class="header_top_right">
+                <div class="heade_land">
+                    <a href="">注册</a>
+                    <i>|</i>
+                    <a href="">登陆</a>
+                    <i class="qipao"><a href="">注册送688元大礼包<img src="https://p2.lefile.cn/product/adminweb/2019/01/18/fbd80d7a-1078-42cd-9558-53e374aada77.png" alt=""></a></i>
+                </div>
+                <div class="heade_phone">
+                    <img src="https://p1.lefile.cn/product/adminweb/2019/01/18/c8f87ce8-1e14-4bb3-854e-f86af0f07072.png" alt="" class="phone1">
+                    <div class="phone22">
+                        <img src="https://p2.lefile.cn/product/adminweb/2020/04/17/5ce4890a-c091-46b4-aabb-8cf49320d08b.png" alt="">
+                        <span>联想智选APP </span>
+                        <p>下载即享 <br>688元新人礼</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="header_bottom_mid">
+                <ul>
+                    <li><a href="shuangshiyi.html" target="_blank">11.11</a></li>
+                    <li><a href="">新品</a></li>
+                    <li><a href="">定制</a></li>
+                    <li><a href="">以旧换新</a></li>
+                    <li><a href="">新品试用</a></li>
+                    <li><a href="">积分购</a></li>
+                    <li><a href="Student.html" target="_blank">学生</a></li>
+                    <li><a href="">直播</a></li>
+                    <li><a href="">企业购</a></li>
+                    <li><a href="">9.9元</a></li>
+                </ul>
+
+                <div class="sea" >
+                    <input type="text" name="" id=""  value="">
+                    <a href=""><span style="background-image: url(https://p4.lefile.cn/product/adminweb/2018/12/29/f26ff743-3f82-4072-b27a-193f0e9ad675.png);"></span></a>
+                </div>
+                <div class="header_top_right">
+                    <div class="heade_land">
+                        <a href="" class="sea_fangdajing"><span style="background-image: url(https://p4.lefile.cn/product/adminweb/2018/12/29/f26ff743-3f82-4072-b27a-193f0e9ad675.png);"></span></a>
+                        <a href="register.html" target="_blank">注册</a>
+                        <i>|</i>
+                        <a href="">登陆</a>
+                        <i class="qipao"><a href="">注册送688元大礼包<img src="https://p2.lefile.cn/product/adminweb/2019/01/18/fbd80d7a-1078-42cd-9558-53e374aada77.png" alt=""></a></i>
+                    </div>
+                    <div class="heade_phone">
+                        <img src="https://p1.lefile.cn/product/adminweb/2019/01/18/c8f87ce8-1e14-4bb3-854e-f86af0f07072.png" alt="" class="phone1">
+                        <div class="phone22">
+                            <img src="https://p2.lefile.cn/product/adminweb/2020/04/17/5ce4890a-c091-46b4-aabb-8cf49320d08b.png" alt="">
+                            <span>联想智选APP </span>
+                            <p>下载即享<br>688元新人礼</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+	$(window).scroll(function(){
+		if($(window).scrollTop()>70){
+			$(".header_top").hide();
+            $(".header_bottom").css({"position":"fixed","z-index":"20","height":"50px","line-height":"50px"});
+            $(".header_bottom>.header_bottom_mid>ul>li").css({"line-height":"50px"});
+            $(".logo").css({"position":"fixed","z-index":"21"});
+            $(".header_bottom_mid>.header_top_right").show()
+            $(".sea").hide();
+            
+        }if($(window).scrollTop()<69){
+            $(".header_top").show();
+            $(".header_bottom").css({"position":"static","z-index":"20","height":"70px","line-height":"70px"});
+            $(".header_bottom>.header_bottom_mid>ul>li").css({"line-height":"70px"});
+            $(".logo").css("position","static");
+            $(".header_bottom_mid>.header_top_right").hide()
+            $(".sea").show();
+        }
+        })
+</script>
+<!-- top结束 -->
+<div class="aifood_lunbo">
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://p3.lefile.cn/product/adminweb/2019/09/19/9e52fbc9-4476-453b-9b23-55e876e87f40.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="https://p2.lefile.cn/product/adminweb/2020/11/10/37d671be-b4c6-4339-9c62-42667f447b67.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="https://p3.lefile.cn/product/adminweb/2020/11/10/fc5eb5c5-5d60-4696-8b30-ac15f7d49dc2.jpg" alt=""></div>
+    </div>
+  </div>
+  <!-- Swiper JS -->
+  <script src="../js/swiper-master/package/swiper-bundle.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container',{
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay:true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</div>
+<!-- 轮播图结束 -->
+
+      <div class="ai_food_food">
+        <div class="ai_food_food_content">
+          <div class="ai_food_food_title"><h3>新品推荐</h3></div>
+          <div class="ai_food_food_content_left">
+              <img src="https://p2.lefile.cn/product/adminweb/2020/08/31/0869d3df-6d83-4d59-81b0-6088c6ee6925.jpg" alt="">
+          </div> 
+          <div class="ai_food_food_content_right">
+            <div class="ai_food_food_content_right_top">
+                <p>联想声波电动牙刷T1（白色）</p>
+                <p style="color: red;">￥199</p>
+                <img src="https://p2.lefile.cn/product/adminweb/2020/08/14/8bc0e065-f48c-4b86-859f-ac15aacb5b18.jpg" alt="">
+            </div>
+            <div class="ai_food_food_content_right_bottom">
+                <div style="margin-right: 10px;">
+                <img src="https://p3.lefile.cn/product/adminweb/2020/04/16/OrSDIErAVXlEh9Pw8nRBb7b7x-0226.w240.jpg" alt="">
+                <p>联想智能扫地机器人A1</p>
+                <p style="color: red;">￥1599</p>
+                </div>
+                <div>
+                <img src="https://p3.lefile.cn/product/adminweb/2020/04/16/OrSDIErAVXlEh9Pw8nRBb7b7x-0226.w240.jpg" alt="">
+                    <p>联想智能编程教育机器人 L-PRGB501/p>
+                    <p style="color: red;">￥5599</p>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="ai_food_food">
+        <div class="ai_food_food_title"><h3>家居</h3></div>
+        <div class="ai_food_biglogo">
+            <img src="https://p4.lefile.cn/product/adminweb/2019/09/19/217eee5d-18c5-4c10-bb6d-4954a9b0614d.jpg" alt="">
+        </div>
+        <div class="ai_food_food_content">
+            <ul>
+                <li>
+                    <img src="https://p4.lefile.cn/product/adminweb/2019/09/10/AWoCljjr4U0vESrSJ9rzmSTx6-4439.w240.jpg" alt="">
+                    <p>小新UM6（红色）与蓝牙音箱耳机K歌套装</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥399</p>
+                </li>
+                <li>
+                    <img src="https://p2.lefile.cn/product/adminweb/2020/05/24/beFvFwDaeMl3NBBWnmBhjwcpF-7860.w240.jpg" alt="">
+                    <p>JBL GO2 音乐金砖二代 蓝牙音箱户外便携音响 珊瑚橙</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥299</p>
+                </li>
+                <li>
+                    <img src="https://p4.lefile.cn/product/adminweb/2020/05/23/LfiZ7ANHUXUgqVeQeCo9GAmNM-0321.w240.jpg" alt="">
+                    <p>小度在家 智能屏 X6 白色</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥399</p>
+                </li>
+                <li>
+                    <img src="https://p1.lefile.cn/product/adminweb/2019/07/19/2TtWo1GHW9jrwWmdxKsJwmD1O-0171.w240.jpg" alt="">
+                    <p>Lecoo感应节水宝S1</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥199</p>
+                </li>
+                <li>
+                    <img src="https://p3.lefile.cn/product/adminweb/2019/05/17/DAvET8wWyLLfD8NsqQ50qAHmF-0031.w240.jpg" alt="">
+                    <p>联想HDMI转换器F1-H01铝合金外壳 HDMI转VGA线转换器</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥54</p>
+                </li>
+                <li>
+                    <img src="https://p1.lefile.cn/product/adminweb/2020/07/29/hmQNIPFSS51msmNDW531C5zm9-0083.w240.jpg" alt="">
+                    <p>联想声波电动牙刷T1（蓝色）</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥199</p>
+                </li>
+            </ul>
+        </div>
+      </div>
+
+
+      <div class="ai_food_food">
+        <div class="ai_food_food_title"><h3>办公</h3></div>
+        <div class="ai_food_biglogo">
+            <img src="https://p3.lefile.cn/product/adminweb/2020/08/14/cdf89130-5f08-4feb-832a-1d7a8ff58322.jpg" alt="">
+        </div>
+        <div class="ai_food_food_content">
+            <ul>
+                <li>
+                    <img src="https://p2.lefile.cn/product/adminweb/2018/08/24/lDd4bIAZJvHgiV6j34d0znjRl-2484.w240.jpg" alt="">
+                    <p>小新UM6（红色）与蓝牙音箱耳机K歌套装</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥399</p>
+                </li>
+                <li>
+                    <img src="https://p4.lefile.cn/product/adminweb/2019/10/19/bCI3Q9Yshg2bGY6EFJcLdQqGz-6843.w240.jpg" alt="">
+                    <p>JBL GO2 音乐金砖二代 蓝牙音箱户外便携音响 珊瑚橙</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥299</p>
+                </li>
+                <li>
+                    <img src="https://p4.lefile.cn/product/adminweb/2018/01/26/UshgRPxv1v8CniHXuycXkKRch-8630.w240.jpg" alt="">
+                    <p>小度在家 智能屏 X6 白色</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥399</p>
+                </li>
+                <li>
+                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/24/mVbjDZllufw0v9ykkp1eGRyRr-2266.w240.jpg" alt="">
+                    <p>Lecoo感应节水宝S1</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥199</p>
+                </li>
+                <li>
+                    <img src="https://p2.lefile.cn/product/adminweb/2019/12/18/PRMViNo2jm7CERPdUvzXzO5An-7187.w240.jpg" alt="">
+                    <p>联想HDMI转换器F1-H01铝合金外壳 HDMI转VGA线转换器</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥54</p>
+                </li>
+                <li>
+                    <img src="https://p1.lefile.cn/product/adminweb/2020/07/31/ltMUfMgq6PgGlwvkyYHxxeKu7-9594.w240.jpg" alt="">
+                    <p>联想声波电动牙刷T1（蓝色）</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥199</p>
+                </li>
+            </ul>
+        </div>
+      </div>
+
+
+      <div class="ai_food_food">
+        <div class="ai_food_food_title"><h3>安防</h3></div>
+        <div class="ai_food_biglogo">
+            <img src="https://p3.lefile.cn/product/adminweb/2020/08/14/6711ca10-444d-4314-b5ac-af05e767adf7.jpg" alt="">
+        </div>
+        <div class="ai_food_food_content">
+            <ul>
+                <li>
+                    <img src="https://p1.lefile.cn/product/adminweb/2020/06/05/oFPyO4cSRkEXiV2hDxxdzFN68-9942.w240.jpg" alt="">
+                    <p>小新UM6（红色）与蓝牙音箱耳机K歌套装</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥2199</p>
+                </li>
+                <li>
+                    <img src="https://p4.lefile.cn/product/adminweb/2020/01/07/3Hm1cTMTFpGaWpUWc6MPqlqoG-0585.w240.jpg" alt="">
+                    <p>JBL GO2 音乐金砖二代 蓝牙音箱户外便携音响 珊瑚橙</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥189</p>
+                </li>
+                <li>
+                    <img src="https://p1.lefile.cn/product/adminweb/2020/05/13/rVBT2BAsBzbwwTvFM8KhJxYJJ-6020.w240.jpg" alt="">
+                    <p>小度在家 智能屏 X6 白色</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥1999</p>
+                </li>
+            </ul>
+        </div>
+      </div>
+
+
+      <div class="ai_food_food">
+        <div class="ai_food_food_title"><h3>健康</h3></div>
+        <div class="ai_food_biglogo">
+            <img src="https://p4.lefile.cn/product/adminweb/2020/08/14/6b396351-f5de-4680-b4f5-e9fee53e922a.jpg" alt="">
+        </div>
+        <div class="ai_food_food_content">
+            <ul>
+                <li>
+                    <img src="https://p3.lefile.cn/product/adminweb/2020/04/15/XgzbMo0yfZ5hA3iEDbzCjYiyP-4169.w240.jpg" alt="">
+                    <p>联想智能体脂秤X2 故宫文创联名</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥109</p>
+                </li>
+                <li>
+                    <img src="https://p1.lefile.cn/product/adminweb/2020/04/15/ypflaG7JccVyV8ELvQ4szvFTB-4314.w240.jpg" alt="">
+                    <p>联想智能体脂秤X2 故宫文创联名</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥109</p>
+                </li>
+                <li>
+                    <img src="https://p2.lefile.cn/product/adminweb/2020/05/25/IDNJXYcgzWP0G9LF8tzwV87Um-0373.w240.jpg" alt="">
+                    <p>智能体脂秤Mini E2</p>
+                    <p style="color: red; margin-top: 10px; font-size: 20px;">￥79</p>
+                </li>
+            </ul>
+        </div>
+      </div>
+
+<div class="aifood_footer" style="margin-top: 40px;">
+    <div style="width: 100%; background-color: #fff;">
+<div class="footer_img">
+    <img src="https://p2.lefile.cn/product/adminweb/2019/08/19/8359a28f-9cce-463d-aaf5-b3c7148872f7.png" alt="">
+    </div>
+</div>
+    <div class="foot">
+        <div class="foot_top">
+
+            <ul>
+                <li>
+                    <a href="" class="foot_top_title">购物指南</a>
+                    <a href="">服务商信息</a>
+                    <a href="">购买流程</a>
+                    <a href="">注册登陆</a>
+                </li>
+                <li>
+                    <a href="" class="foot_top_title">配送方式</a>
+                    <a href="">配送方式</a>
+                    <a href="">配送方式信息</a>
+                    <a href="">签收原则</a>
+                    <a href="">物流查询</a>
+                </li>
+                <li>
+                    <a href="" class="foot_top_title">支付方式</a>
+                    <a href="">分期支付</a>
+                    <a href="">支付方式</a>
+                    <a href="">支付问题</a>
+                </li>
+                <li>
+                    <a href="" class="foot_top_title">订单信息</a>
+                    <a href="">订单信息</a>
+                    <a href="">发票信息</a>
+                    <a href="">手机激活查询</a>
+                </li>
+                <li>
+                    <a href="" class="foot_top_title">售后服务</a>
+                    <a href="">
+
+                        售后服务总则
+        
+                    </a>
+                    <a href="">
+
+                        24小时在线客服
+        
+                    </a>
+                    <a href="">
+
+                        联想服务入口
+        
+                     </a>
+                     <a href="">
+
+                        热门解决方案
+        
+                     </a>
+                    <a href="">
+
+                        Lenovo Quick Fix工具
+        
+                     </a>
+                </li>
+                
+                <li>
+                    <a href="" class="foot_top_title">其他说明</a>
+                    <a href="">服务承诺</a>
+                    <a href="">账户安全</a>
+                    <a href="">手机产品购买须知</a>
+                    <a href="">环境信息</a>
+                </li>
+                <li class="kef">
+                    <div class="kef_phone">
+                        <h3>400-990-8888转4</h3>
+                        <span>周一到周日 9:00-21:00</span>
+                        <a href=""></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="foot_bot">
+            <div class="foot_bot_con">
+                <div class="foot_bot_con_left">
+                    
+
+                版权所有：1998-2020 联想集团
+
+                
+                <span>|</span>
+                &nbsp;
+                <a href="" >法律公告</a>
+                &nbsp;
+                <span>|</span>
+                &nbsp;
+                <a href="">隐私权政策</a>
+                &nbsp;
+                <span>|</span>
+                &nbsp;
+                <a href="">产品安全</a>
+                &nbsp;
+                </div>
+                <div class="foot_bot_con_right">
+                   <a href="">京ICP备11035381</a>
+                   &nbsp;
+                   <span>|</span>
+                   &nbsp;
+                   <i>京公网安备110108007970号</i>
+                   &nbsp;
+                   <span>|</span>
+                   &nbsp;
+                   <a href="">营业执照:91110108700000458B</a> 
+                   &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sort" >
+    <ul>
+    
+    <li>
+        <a href="">
+            <img src="../img/b-rx.png" alt="" class="baiimg">
+            <img src="../img/r-rx.png" alt="" class="hongimg">
+        </a>
+        <ul>
+            <li ><a href=""><img src="../img/b-scrx.png" alt=""class="li_bai"></a></li>
+            <li ><a href=""><img src="../img/r-scrx.png" alt=""class="li_hong"></a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="">
+            <img src="../img/b-zx.png" alt="" class="baiimg">
+            <img src="../img/r-zx.png" alt="" class="hongimg">
+        </a>
+        <ul>
+            <li ><a href=""><img src="../img/b-sqzx.png" alt=""class="li_bai"></a></li>
+            <li ><a href=""><img src="../img/r-sqzx.png" alt=""class="li_hong"></a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="">
+            <img src="../img/b-md.png" alt="" class="baiimg">
+            <img src="../img/r-md.png" alt="" class="hongimg">
+        </a>
+    </li>
+    <li>
+        <a href="">
+            <img src="../img/b-tc.png" alt="" class="baiimg">
+            <img src="../img/r-tc.png" alt="" class="hongimg">
+        </a>
+    </li>
+    <li>
+        <a href="">
+            <img src="../img/b-app.png" alt="" class="baiimg">
+            <img src="../img/r-app.png" alt="" class="hongimg">
+        </a>
+        <ul style="position: absolute;top: 0px;left: -101px;">
+            <li ><a href=""><img src="../img/eewwmm.png" alt="" class="li_bai"></a></li>
+            <li ><a href=""><img src="../img/eewwmm.png" alt="" class="li_hong"></a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="">
+            <img src="../img/b-zc.png" alt="" class="baiimg">
+           <img src="../img/r-zc.png" alt="" class="hongimg">
+        </a>
+        <ul style="position: absolute;top: 0px;left: -101px;">
+            <li ><a href=""><img src="../img/zcydn.png" alt=""class="li_bai"></a></li>
+            <li ><a href=""><img src="../img/zcydn.png" alt=""class="li_hong"></a></li>
+        </ul>
+    </li>
+    <li class="firstlevel">
+        <a href="">
+            <img src="../img/b-fh.png" alt="" class="baiimg">
+            <img src="../img/r-fh.png" alt="" class="hongimg">
+        </a>
+    </li>
+</ul>
+</div>
+
+<script>
+    		$(window).scroll(function(){
+		        if($(window).scrollTop()>400){
+					$(".sort").show();
+				}else{
+					$(".sort").hide();
+				}
+   			})
+
+//			回到顶部
+			$(".sort>ul>li>.firstlevel").click(function(){
+				if($(this).parent().index()==16){
+					$("html,body").animate({"scrollTop":"0px"},500);
+		            return;
+		        }
+       		 })
+
+
+</script>
+</body>
+</html>

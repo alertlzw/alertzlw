@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Lenovo联想售后客服服务中心，提供驱动下载，配置查询，保修服务-联想服务</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+		<link rel="stylesheet" href="../css/swiper-bundle.css">
+		<link rel="stylesheet" type="text/css" href="../css/fuwu.css"/>
+		<script src="../js/jquery-3.5.1.js"></script>
+		<script src="../js/vue.js"></script>
+		<!--371行还有一个script外链-->
+		<style>
+			li{
+				list-style: none;
+			}
+
+		</style>
+	</head>
+	<body>
+		<!--头部--> 
+		<header>
+	        <div class="logo"><a href=""></a></div>
+	        <div class="header_top">
+	            <div class="header_top_mid">
+	            <ul>
+	                <li><a href="Mall.html">商城</a></li>
+	                <li><a href="">企业购</a></li>
+	                <li><a href="Service.html">服务</a></li>
+	                <li><a href="community.html">社区</a></li>
+	                <li><a href="">门店</a></li>
+	                <li><a href="pingpai.html">品牌</a></li> 
+	            </ul>
+	            <div class="header_top_right">
+	                <div class="heade_land">
+	                    <a href="register.html" target="_blank">注册</a>
+	                    <i style="display: inline-block;border-left:1px solid #b8b8b8;height:11px; margin:0 8px"></i>
+	                    <a href="">登录</a>
+	                    <i class="qipao"><a href="">注册立即抽好礼<img src="../img/sever/gift.png" alt=""></a></i>
+	                </div>
+	                <div class="heade_phone">
+	                    <img src="../img/sever/phone.png" alt="" class="phone1">
+	                    <div class="phone22">
+	                    	<div>
+		                        <div class="phoneImg"><img src="../img/sever/mobileimg.png" alt=""></div>
+		                        <p>联想服务手机版</p>
+	                    	</div>
+	                    </div>
+	                </div>
+	            </div>
+	            </div>
+	        </div>
+	        <div class="header_bottom">
+	            <div class="header_bottom_mid">
+	                <ul>
+	                    <li><a href="">联想服务</a></li>
+	                    <li><a href="">Think服务</a></li>
+	                    <li><a href="">大客户服务</a></li>
+	                    <li><a href="">手机服务</a></li>
+	                    <li><a href="">官方微信</a></li>
+	                    <li><a href="">服务商城</a></li>
+	                    <li><a href="">官方小程序 <small>new</small></a></li>
+	                    <li><a href="">企业级整体维保</a></li>
+	                </ul>
+
+	            
+	            </div>
+	        </div>
+	    </header>
+	
+		<!--身体-->
+		<div class="container"style="width: 1200px; padding: 0;">
+			<!--轮播图-->
+			<div class="swiper-box">
+				 <div class="swiper-container SwiperRe">
+				    <div class="swiper-wrapper" style="margin: 0;">
+				    	<div class="swiper-slide"><img src="../img/sever/swi1.png"/></div>
+				    	<div class="swiper-slide"><img src="../img/sever/swi2.jpg"/></div>
+				    	<div class="swiper-slide"><img src="../img/sever/swi3.jpg"/></div>
+				    	<div class="swiper-slide"><img src="../img/sever/swi4.jpg"/></div>
+				    	<div class="swiper-slide"><img src="../img/sever/swi5.png"/></div>
+				    	<div class="swiper-slide"><img src="../img/sever/swi6.jpg"/></div>
+				    </div>
+				    <!-- Add Pagination -->
+				    <div class="swiper-pagination swiperList"></div>
+				 </div>
+			</div>
+			<!--服务框-->
+			<div class="seach">
+				<!--提示栏-->
+				<div>
+					<p class="big-tips">欢迎使用联想服务</p>
+					<p class="small-tips">我们随时为您提供帮助</p>
+				</div>
+				<!--搜索框-->
+				<div class="search-box">
+					<form action="" method="post">
+						<div class="input-group">
+		      				<input type="text" class="form-control seach-form" id="exampleInputAmount" placeholder="查找设备型号、编号，例如YOGA910">
+		    				<div class="input-group-addon seach-font"><span class="glyphicon glyphicon-search"></span></div>
+	  			  		</div>
+					</form>
+					<!--搜索框下的字-->
+					<p class="tips-text">输入主机编号或设备型号，了解保修、配置信息，查看产品手册和相关问题</p>
+				</div>
+			</div>
+			<!--选择产品获得支撑-->
+			<div class="chose">
+				<p class="big-tips">请选择您的产品获取支持</p>
+				<p class="small-tips">请选择您的设备获取支持，如下载驱动，手册和常见问题等</p>
+				<p class="chose-a"><a href="">绑定设备，快速获取精准服务</a></p>
+				<!--产品列表-->
+				<div class="product" id="product">
+					<ul>
+						<li v-for="(v,i) in p_list">
+							<a href="">
+								<div class="product_box">
+									<div class="product_img">
+										<img v-bind:src=v.p_img />
+									</div>
+									<p>{{v.p_title}}</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--帮助与支持-->
+			<div class="help">
+				<p class="big-tips">帮助与支持</p>
+				<p class="small-tips">通过直接选择您所需要的功能来获取服务和支持</p>
+				<div class="help-box">
+					<ul>
+						<li>
+							<a href="">
+								<div><img src="../img/sever/down.png" alt="" /></div>
+								<p class="help-name">驱动和软件下载</p>
+								<p class="help-intro">查询和下载您设备的<br />驱动和软件</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div><img src="../img/sever/set.png" alt="" /></div>
+								<p class="help-name">保修查询</p>
+								<p class="help-intro">查询您的产品保修状态<br />和服务信息</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div><img src="../img/sever/search.png" alt="" /></div>
+								<p class="help-name">服务网点查询</p>
+								<p class="help-intro">查询离您最近的联想官方<br />服务网点</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div><img src="../img/sever/housekeeperIcon.png" alt="" /></div>
+								<p class="help-name">联想电脑管家</p>
+								<p class="help-intro">集官方驱动、服务于设备维护<br />于一身的全能守护专家</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div><img src="../img/sever/wechat.png" alt="" /></div>
+								<p class="help-name">微信服务</p>
+								<p class="help-intro">实时服务<br />贴心便捷</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div><img src="../img/sever/robort.png" alt="" /></div>
+								<p class="help-name">24小时智能客服</p>
+								<p class="help-intro">即问即答，为您解答<br />联想产品使用中的疑问</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--联想服务站-->
+			<div class="station">
+				<p class="big-tips">联想服务站</p>
+				<p class="small-tips">如果您的设备需要维修，您可前往联想服务站，在那里为您提供专业快捷的服务</p>
+				<div class="station-box">
+					<img src="../img/sever/serverimg.jpg" alt="" />
+					<div class="station-right">
+						<p class="station-title" style="margin-bottom: 0;margin-top: 0;">
+							<span>联想3C服务中心广州显示器专业店</span>
+							<a href="">店面详情</a>
+						</p>
+						<p class="station-place">广东广州市天河区新塘大街新塘商贸园D栋202
+						   <span style="margin-left: 14px;">距您4.1km</span>
+						</p>
+						<p class="station-time">
+							营业时间：周一至周日8:30-17:00
+						</p>
+						<p class="station-phone">
+							电话：020-87577086
+						</p>
+						<a href="" class="station-link">查看其它服务站&gt;</a>
+					
+					</div>
+				</div>
+			</div>
+			<!--增值服务-->
+			<div class="increment">
+				<p class="big-tips">增值服务</p>
+				<p class="small-tips">通过购买增值服务，您可以获取更专业的帮助</p>
+				<div class="increment-box">
+					<ul>
+						<li>
+							<a href="">
+								<div><img src="../img/sever/resetsystem.png" alt="" /></div>
+								<p class="increment-name">软件调修</p>
+								<p class="increment-intro">专业重装服务<br />让您电脑重新焕发活力</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div><img src="../img/sever/engineerhome.png" alt="" /></div>
+								<p class="increment-name">原厂保修</p>
+								<p class="increment-intro">全国联保原厂部件<br />免费维修</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div><img src="../img/sever/game.png" alt="" /></div>
+								<p class="increment-name">保养维修</p>
+								<p class="increment-intro">全面保养<br />延长设备寿命</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div><img src="../img/sever/sb.png" alt="" /></div>
+								<p class="increment-name">电脑配件</p>
+								<p class="increment-intro">服务优品<br />待您选我</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div><img src="../img/sever/ztsj.png" alt="" /></div>
+								<p class="increment-name">硬件升级</p>
+								<p class="increment-intro">焕然“芯”生<br />让电脑速度飞起来</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div><img src="../img/sever/phonesel.png" alt="" /></div>
+								<p class="increment-name">产品购买咨询</p>
+								<p class="increment-intro">购买咨询：4009908888-4-5</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--主位置banner-->
+			<div class="banner">
+				<div>
+					<a href=""><img src="../img/sever/cubenew.png" alt="" /></a>
+				</div>
+			</div>
+			<!--热门问题及解决方案-->
+			<div class="problem">
+				<p class="big-tips">热门问题及解决方案</p>
+				<p class="small-tips">这里给您显示最热门的解决方案，帮助您来提升设备使用技巧和解决遇到的问题</p>
+				<div class="problem-list">
+					<p><a href="">联想支持Win10 2020年10月更新（20H2版本）的机型</a></p>
+					<p><a href="">制作Win10系统安装U盘和安装纯净版Win10的通用教程</a></p>
+					<p><a href="">Lenovo Quick Fix：Office激活注册帐户白屏问题修复工具</a></p>
+					<p><a href="">ThinkPad X1 Fold安全与保修指南</a></p>
+					<p><a href="">ThinkPad X1 Fold Gen 1用户指南</a></p>
+					<p><a href="">ThinkPad X1 Fold Gen 1设置指南</a></p>
+					<p><a href="">按快捷键Ctrl+Shift+L 出现性能记录已开始</a></p>
+				</div>
+				<p class="problem-more"><a href="">更多热门问题&nbsp;&gt;</a></p>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="foot">
+			<div class="foot-con">
+				<ul>
+					<li class="small-li">
+						<p class="foot-text">关于我们</p>
+						<div class="foot-list">
+							<p><a href="">关于联想</a></p>
+							<p><a href="">加入联想</a></p>
+							<p><a href="">联系我们</a></p>
+							<p><a href="">网站地图</a></p>
+						</div>
+					</li>
+					<li class="small-li">
+						<p class="foot-text">联想网站</p>
+						<div class="foot-list">
+							<p><a href="">联想商城</a></p>
+							<p><a href="">ThinkPad服务</a></p>
+							<p><a href="">来酷商城</a></p>
+							<p><a href="">联想社区</a></p>
+							<p><a href="">联想商用大客户</a></p>
+							<p><a href="">联想企业网盘</a></p>
+							<p><a href="">联想Filez</a></p>
+						</div>
+					</li>
+					<li style="width: 180px;">
+						<p class="foot-text">更多服务与支持</p>
+						<div class="foot-list">
+							<p><a href="">配置查询</a></p>
+							<p><a href="">24小时智能客服</a></p>
+							<p><a href="">官方小程序</a><small class="foot-new">new</small></p>
+							<p><a href="">商用大客户服务网站</a></p>
+							<p><a href="">联想驱动管理</a></p>
+							<p><a href="">联想电脑管家</a></p>
+							<p><a href="">官方小程序</a></p>
+							<p><a href="">微视频服务专区</a></p>
+							<p><a href="">Windows 8.1专区</a></p>
+							<p><a href="">热门解决方案</a></p>
+							<p><a href="">用户手册查询</a></p>
+							<p><a href="">预约技术支持</a></p>
+							<p><a href="">联想官方微信服务</a></p>
+							<p><a href="">Lenovo QuickFix 工具</a></p>
+							
+						</div>
+					</li>
+					<li class="small-li">
+						<p class="foot-text">增值服务</p>
+						<div class="foot-list">
+							<p><a href="">延长保修</a></p>
+							<p><a href="">重装系统</a><small class="foot-new">new</small></p>
+							<p><a href="">远程专家</a></p>
+							<p><a href="">数据恢复</a></p>
+							<p><a href="">专家上门</a></p>
+							<p><a href="">呵护爱机</a></p>
+							<p><a href="">服务优品</a></p>
+							<p><a href="">更多服务</a></p>
+						</div>
+					</li>
+					<li class="small-li">
+						<p class="foot-text">硬件升级</p>
+						<div class="foot-list">
+							<p><a href="">内存升级</a></p>
+							<p><a href="">固态盘加装</a></p>
+							<p><a href="">旧机升级（台式机）</a></p>
+							<p><a href="">硬件升级</a></p>
+							<p><a href="">玛雅游戏服务</a></p>
+							<p><a href="">拯救者笔记本UIY升级套装</a></p>
+							<p><a href="">更多服务</a></p>
+						</div>
+					</li>
+					<li style="width: 180px;">
+						<p class="foot-text">其他资源</p>
+						<div class="foot-list">
+							<p><a href="">IWS全球联保</a></p>
+							<p><a href="">电源线召回</a></p>
+							<p><a href="">产品安全公告</a></p>
+							<p><a href="">X1 Carbon 2017召回</a></p>
+							<p><a href="">部分笔记本电池召回</a></p>
+							<p><a href="">保修及服务政策</a></p>
+						</div>
+					</li>					
+				</ul>
+				<div class="ewm">
+					<p class="ewm-title">联想微信</p>
+					<img src="../img/sever/lenovoqrcode.jpg" alt="" />
+					<p class="ewm-text">关注官方微信，获取人工服务</p>
+					<img src="../img/sever/xcxcode.jpg" alt="" />
+					<p class="ewm-text">官方小程序，扫码体验</p>
+				</div>
+			</div>
+			<div class="foot-copyright">
+				<p>版权所有：应该是联想的<span style="margin-left: 50px;">京ICP备11035381</span></p>
+			</div>
+		</div>
+	
+	<script src="../js/swiper-bundle.js"></script>
+		<script>
+			//	头部				
+	 	$(window).scroll(function(){
+			if($(window).scrollTop()>70){
+				$(".header_top").hide();
+	            $(".header_bottom").css({"position":"fixed","z-index":"20","height":"50px","line-height":"50px"});
+	            $(".header_bottom>.header_bottom_mid>ul>li").css({"line-height":"50px"});
+	            $(".logo").css({"position":"fixed","z-index":"21"});
+	            $(".header_bottom_mid>.header_top_right").show()
+	            $(".sea").hide();
+	            
+	        }if($(window).scrollTop()<69){
+	            $(".header_top").show();
+	            $(".header_bottom").css({"position":"static","z-index":"20","height":"70px","line-height":"70px"});
+	            $(".header_bottom>.header_bottom_mid>ul>li").css({"line-height":"70px"});
+	            $(".logo").css("position","static");
+	            $(".header_bottom_mid>.header_top_right").hide()
+	            $(".sea").show();
+	        }
+	    })	
+			
+			
+			
+//			轮播图
+		    var swiper = new Swiper('.swiper-container', {
+     			spaceBetween: 30,
+      			centeredSlides: true,
+      			autoplay: {
+        			delay: 2000,
+        			disableOnInteraction: false,
+      			},
+      			pagination: {
+        			el: '.swiper-pagination',
+        			clickable: true,
+      			},
+    		});
+//			滚轮事件
+			$(window).scroll(function(){
+				if($(window).scrollTop()>50){
+					$(".head-hide").show()
+//					$(".sec-head").show()
+					$("#head").css("margin-top","-120px")
+				}else if($(window).scrollTop()<50){
+					$(".head-hide").hide()
+//					$(".sec-head").hide()
+					$("#head").css("margin-top","0")
+				}
+			})
+
+
+//	  		产品列表
+			new Vue({
+				el:"#product",
+				data:{
+					p_list:[
+						{
+							p_img:"../img/sever/notebook.png",
+							p_title:"联想笔记本"
+						},
+						{
+							p_img:"../img/sever/destop.png",
+							p_title:"联想台式机"
+						},
+						{
+							p_img:"../img/sever/think.png",
+							p_title:"Think产品"
+						},
+						{
+							p_img:"../img/sever/server.png",
+							p_title:"服务器及存储"
+						},
+						{
+							p_img:"../img/sever/printer.png",
+							p_title:"打印机及数码选件"
+						},
+						{
+							p_img:"../img/sever/zhihui.png",
+							p_title:"智慧联想"
+						},
+						{
+							p_img:"../img/sever/SmartTV.png",
+							p_title:"智能电视"
+						},
+						{
+							p_img:"../img/sever/Tablet.png",
+							p_title:"平板"
+						},
+						{
+							p_img:"../img/sever/arvr.png",
+							p_title:"AR/VR"
+						},
+						{
+							p_img:"../img/sever/lenovoPhone.png",
+							p_title:"联想手机"
+						},
+						{
+							p_img:"../img/sever/ipc.png",
+							p_title:"工控机"
+						},
+						{
+							p_img:"../img/sever/personsave.png",
+							p_title:"个人云存储"
+						},
+					]
+				}
+			})
+		
+		</script>
+	</body>
+</html>
